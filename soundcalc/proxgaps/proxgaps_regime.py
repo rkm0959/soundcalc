@@ -13,28 +13,28 @@ class ProximityGapsRegime:
         """
         raise NotImplementedError
 
-    def get_max_delta(rate: float, dimension: int, field: FieldParams) -> float:
+    def get_max_delta(self, rate: float, dimension: int, field: FieldParams) -> float:
         """
         Returns the maximum delta for this regime, based on the rate
         and the dimension of the code.
         """
         raise NotImplementedError
 
-    def get_max_list_size(rate: float, dimension: int, field: FieldParams) -> int:
+    def get_max_list_size(self, rate: float, dimension: int, field: FieldParams, delta: float) -> int:
         """
-        Returns an upper bound on the list size for this regime.
+        Returns an upper bound on the list size for this regime, and for a given delta
         E.g., unique decoding regime may return 1.
         """
         raise NotImplementedError
 
-    def get_error_powers(rate: float, dimension: int, field: FieldParams, num_functions: int) -> float:
+    def get_error_powers(self, rate: float, dimension: int, field: FieldParams, num_functions: int) -> float:
         """
         Returns an upper bound on the MCA error when applying a random linear combination.
         The coefficients are assumed to be powers here.
         """
         raise NotImplementedError
 
-    def get_error_linear(rate: float, dimension: int, field: FieldParams, num_functions: int) -> float:
+    def get_error_linear(self, rate: float, dimension: int, field: FieldParams, num_functions: int) -> float:
         """
         Returns an upper bound on the MCA error when applying a random linear combination.
         The coefficients are assumed to be independent here.

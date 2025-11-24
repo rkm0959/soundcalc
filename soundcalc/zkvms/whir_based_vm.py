@@ -2,8 +2,11 @@
 from dataclasses import dataclass
 
 from soundcalc.common.fields import FieldParams, field_element_size_bits
-from soundcalc.common.utils import get_size_of_merkle_path_bits
+from soundcalc.common.utils import get_bits_of_security_from_error, get_size_of_merkle_path_bits
+from soundcalc.proxgaps.proxgaps_regime import ProximityGapsRegime
+from soundcalc.proxgaps.unique_decoding import UniqueDecodingRegime
 from soundcalc.zkvms.zkvm import zkVM
+from typing import Tuple
 
 @dataclass(frozen=True)
 class WHIRBasedVMConfig:
@@ -189,12 +192,85 @@ class WHIRBasedVM(zkVM):
 
     def get_security_levels(self) -> dict[str, dict[str, int]]:
 
+        regimes = [UniqueDecodingRegime()] # TODO: add other regimes later
+
+        result = {}
+        for regime in regimes:
+            id = regime.identifier()
+            result[id] = self.get_security_levels_for_regime(regime)
+
+        return result
+
+    def get_security_levels_for_regime(self, regime: ProximityGapsRegime) -> dict[str, int]:
+        """
+        Same as get_security_levels, but for a specific regime.
+        """
+        levels = {}
+
         # TODO: add an error from the batching step
 
-        # TODO: for initial sum check: k0 errors
+        # initial iteration (just sum check / fold errors)
+        iteration = 0
+        for round in range(1, self.folding_factor + 1):
+            epsilon = self.epsilon_fold(iteration, round, regime)
+            levels[f"fold(i={iteration},s={round})"] = get_bits_of_security_from_error(epsilon)
 
-        # TODO: for each iteration: OOD errors, shift errors, fold errors
+        # for each iteration i = 1, ... M - 1: OOD errors, shift errors, fold errors
+        for iteration in range(1, self.num_iterations + 1):
+            # out of domain samples
+            epsilon_ood = self.epsilon_out(iteration, regime)
+            levels[f"OOD(i={iteration})"] = get_bits_of_security_from_error(epsilon_ood)
+            # shift queries
+            epsilon_shift = self.epsilon_shift(iteration, regime)
+            levels[f"Shift(i={iteration})"] = get_bits_of_security_from_error(epsilon_shift)
+            # sum check (one error for each round)
+            for round in range(1, self.folding_factor + 1):
+                epsilon = self.epsilon_fold(iteration, round, regime)
+                levels[f"fold(i={iteration},s={round})"] = get_bits_of_security_from_error(epsilon)
 
-        # TODO: final error from final
+        # final error
+        epsilon_fin = self.epsilon_fin(regime)
+        levels["fin"] = get_bits_of_security_from_error(epsilon_fin)
 
-        return {} # TODO: implement
+        # add a "total" level
+        levels["total"] = min(list(levels.values()))
+
+        return levels
+
+
+    def get_code_for_iteration_and_round(self, iteration: int, round: int) -> tuple[float, int]:
+        """
+        Returns the code for the given iteration and round. That is, this returns a pair (rate, dimension)
+        of the code C_{RS}^{i,s} (in notation of Theorem 5.2 in WHIR paper).
+        Here, i <= M-1 is the iteration and s <= k is the round.
+        """
+        # TODO: implement correctly
+        return (0.5, 20)
+
+    def epsilon_fold(self, iteration: int, round: int, regime: ProximityGapsRegime) -> float:
+        """
+        Returns the error of a folding round. This is epsilon^fold_{i,s} in the notation
+        of the paper (Theorem 5.2 in WHIR paper), where i is the iteration and s <= k is the round.
+        """
+        return 1 # TODO.
+
+    def epsilon_out(self, iteration: int, regime: ProximityGapsRegime) -> float:
+        """
+        Returns the error epsilon^out_i from the paper (Theorem 5.2 in WHIR paper), where i is the iteration.
+
+        Follows https://github.com/WizardOfMenlo/stir-whir-scripts/blob/main/src/errors.rs#L146, as WHIR paper
+        does not cover the case of having more than one OOD sample.
+        """
+        return 1 # TODO
+
+    def epsilon_shift(self, iteration: int, regime: ProximityGapsRegime) -> float:
+        """
+        Returns the error epsilon^shift_i from the paper (Theorem 5.2 in WHIR paper), where i is the iteration.
+        """
+        return 1 # TODO
+
+    def epsilon_fin(self, regime: ProximityGapsRegime) -> float:
+        """
+        Returns the error epsilon^fin from the paper (Theorem 5.2 in WHIR paper).
+        """
+        return 1 # TODO
