@@ -1,7 +1,8 @@
 
 from dataclasses import dataclass
 
-from soundcalc.common.fields import FieldParams
+from soundcalc.common.fields import FieldParams, field_element_size_bits
+from soundcalc.common.utils import get_size_of_merkle_path_bits
 from soundcalc.zkvms.zkvm import zkVM
 
 @dataclass(frozen=True)
@@ -44,16 +45,19 @@ class WHIRBasedVMConfig:
 
     # how many functions do we test in one go
     # TODO (BW): need to check how batching is done in WHIR
+    # This is not written in the WHIR paper IIUC, but here it is done:
+    # https://github.com/WizardOfMenlo/stir-whir-scripts/blob/main/src/whir.rs#L144
     # batch_size: int
 
     # degree of constraints being proven on the committed words
-    # This is d in Construction 5.1 in WHIR.
+    # This is d in Construction 5.1 in WHIR. Note that d = max{d*,3},
+    # and d* =  1 + deg_Z(hat{w}0) + max_i deg_Xi(hat{w}0)
     constraint_degree: int
 
     # TODO (BW): grinding?
     # TODO: number of queries (different for each round)
 
-    # the number of queries for each round (length M-1)
+    # the number of queries for each round (length M)
     num_queries: list[int]
 
     # the number of OOD samples for each round (length M-1)
@@ -83,19 +87,18 @@ class WHIRBasedVM(zkVM):
         # this also involves determining all log degrees
         assert(config.log_inv_rate > 0 and config.folding_factor >= 1)
 
-        # the log degrees that we have are (m0, m1 = m0 - k, m2 = m0 - 2k, ..., m(M-1) = m0 - (M-1)k)
+        # the log degrees that we have are (m0, m1 = m0 - k, m2 = m0 - 2k, ..., m(M) = m0 - (M)k)
         assert (self.num_iterations * self.folding_factor <= config.log_degree)
-        self.log_degrees = [config.log_degree - i * self.folding_factor for i in range(self.num_iterations)]
+        self.log_degrees = [config.log_degree - i * self.folding_factor for i in range(self.num_iterations + 1)]
 
         # the eval domain sizes shrink by a factor of two, so the rates decrease by a factor of
-        self.log_eval_domains = config.log_inv_rate + config.log_inv_rate
-        self.log_inv_rates = [config.log_inv_rate + i * (self.folding_factor - 1) for i in range(self.num_iterations)]
+        self.log_inv_rates = [config.log_inv_rate + i * (self.folding_factor - 1) for i in range(self.num_iterations + 1)]
 
         # ensure that we did not mess up with the number of rounds
         assert(len(self.num_ood_samples) == self.num_iterations - 1)
-        assert(len(self.num_queries)     == self.num_iterations - 1)
-        assert(len(self.log_degrees)     == self.num_iterations)
-        assert(len(self.log_inv_rates)   == self.num_iterations)
+        assert(len(self.log_degrees)     == self.num_iterations + 1)
+        assert(len(self.log_inv_rates)   == self.num_iterations + 1)
+        assert(len(self.num_queries)     == self.num_iterations)
 
 
     def get_name(self) -> str:
@@ -132,7 +135,57 @@ class WHIRBasedVM(zkVM):
         return "\n".join(lines)
 
     def get_proof_size_bits(self) -> int:
-        return -1 # TODO: implement
+
+        # We estimate the proof size by looking at the WHIR paper, counting sizes of prover messages.
+        # Note that verifier messages do not count into proof size, as they are obtained from Fiat-Shamir.
+        # Here, messages are either field elements, polynomials, functions, or function evaluations.
+        #
+        # Field elements are included directly in the proof;
+        # Polynomials are sent by the vector of their coefficients;
+        # Functions are sent in the form of a Merkle root;
+        # Function evaluations are sent in the form of a Merkle path;
+
+        field_size_bits = field_element_size_bits(self.field)
+
+        # Prover sends the initial function (Merkle root)
+        proof_size = self.hash_size_bits
+
+        # Initial sum check: Prover sends k0 polynomials of degree d
+        proof_size += self.folding_factor * self.constraint_degree * field_size_bits
+
+        # Main loop, runs for i = 1 to i = M - 1
+        for i in range(1, self.num_iterations):
+            # In each iteration: send a function, then do OOD samples, then do sum check rounds
+
+            # Send function
+            proof_size += self.hash_size_bits
+
+            # Send evaluations for the OOD samples
+            proof_size += self.num_ood_samples[i-1] * field_size_bits
+
+            # Sum check rounds
+            proof_size += self.folding_factor * self.constraint_degree * field_size_bits
+
+        # Prover sends the final polynomial. This is a multi-linear polynomial in
+        # m_M variables, i.e., it has 2^{m_M} coefficients.
+        assert self.log_degrees
+        proof_size += self.log_degrees[-1] * field_size_bits
+
+        # Decision phase: we query each function f_0,...,f_{M-1} that the prover sent
+        # at t_i groups of points. Each group is a set of "folding siblings", also
+        # called a "Block" in the literature. As in the WHIR paper, we assume that
+        # an entire block is stored in the Merkle leaf. That is, we simply count
+        # t_i Merkle leafs.
+        assert(len(self.num_queries)     == self.num_iterations)
+        for i in range(self.num_iterations):
+            domain_size = 2 ** (self.log_degrees[i] + self.log_inv_rates[i])
+            block_size = 2 ** self.folding_factor
+            num_leafs = domain_size / block_size
+            merkle_path_size = get_size_of_merkle_path_bits(num_leafs=num_leafs, tuple_size=block_size, element_size_bits=field_size_bits, hash_size_bits=self.hash_size_bits)
+            proof_size += self.num_queries[i] * merkle_path_size
+
+
+        return proof_size
 
     def get_security_levels(self) -> dict[str, dict[str, int]]:
         return {} # TODO: implement

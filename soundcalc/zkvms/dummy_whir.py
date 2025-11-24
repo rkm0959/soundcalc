@@ -16,13 +16,13 @@ class DummyWHIRPreset:
         name = "DummyWHIR"
         hash_size_bits = 256
         log_inv_rate = 1 # rate 1/2
-        num_iterations = 3
-        folding_factor = 2
-        field = GOLDILOCKS_3
-        log_degree = 20
+        num_iterations = 5
+        folding_factor = 4
+        field = GOLDILOCKS_2
+        log_degree = 23
         constraint_degree = 1
-        num_queries = [10,5]
-        num_ood_samples = [2,2]
+        num_queries = [20,15,12,10,8]
+        num_ood_samples = [2,2,2,2]
 
 
         cfg = WHIRBasedVMConfig(
