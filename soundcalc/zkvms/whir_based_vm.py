@@ -53,8 +53,8 @@ class WHIRBasedVMConfig:
     batch_size: int
 
     # Boolean flag to indicate if batching is implemented using coefficients
-    # r^0, r^1, ... r^{num_polys-1} (power_batching = True) or
-    # 1, r_1, r_2, ... r_{num_polys - 1} (power_batching = False)
+    # r^0, r^1, ... r^{batch_size-1} (power_batching = True) or
+    # 1, r_1, r_2, ... r_{batch_size - 1} (power_batching = False)
     power_batching: bool
 
     # Number of bits of grinding for the batching round

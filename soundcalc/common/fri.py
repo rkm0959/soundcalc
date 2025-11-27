@@ -58,7 +58,7 @@ def get_FRI_query_phase_error(theta: float, num_queries: int, grinding_bits: int
 def get_FRI_proof_size_bits(
         hash_size_bits: int,
         field_size_bits: int,
-        num_functions: int,
+        batch_size: int,
         num_queries: int,
         witness_size: int,
         field_extension_degree: int,
@@ -86,7 +86,7 @@ def get_FRI_proof_size_bits(
     # each leaf i for that root contains symbols i for all initial functions.
     n = int(witness_size)
     num_leafs = n // int(folding_factor)
-    tuple_size = num_functions
+    tuple_size = batch_size
     size_bits += hash_size_bits + num_queries * get_size_of_merkle_path_bits(num_leafs, tuple_size, field_size_bits, hash_size_bits)
 
 

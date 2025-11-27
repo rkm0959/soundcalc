@@ -19,7 +19,7 @@ class FRIParameters:
     D: int
     F: float
     power_batching: bool
-    num_functions: int
+    batch_size: int
     num_queries: int
     witness_size: int
     field_extension_degree: int
