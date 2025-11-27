@@ -9,7 +9,7 @@ from soundcalc.common.utils import get_bits_of_security_from_error
 from soundcalc.proxgaps.johnson_bound import JohnsonBoundRegime
 from soundcalc.proxgaps.proxgaps_regime import ProximityGapsRegime
 from soundcalc.proxgaps.unique_decoding import UniqueDecodingRegime
-from soundcalc.zkvms.best_attack import FRIParameters, best_attack_security
+from soundcalc.zkvms.best_attack import get_best_attack_security
 from soundcalc.zkvms.zkvm import zkVM
 from ..common.fields import FieldParams, field_element_size_bits
 from ..common.fri import get_FRI_proof_size_bits, get_num_FRI_folding_rounds
@@ -246,25 +246,12 @@ class FRIBasedVM(zkVM):
             result[id] = fri_levels | proof_system_levels | {"total": total}
 
 
-        fri_parameters = FRIParameters(
-            hash_size_bits=self.hash_size_bits,
-            field_size_bits=field_element_size_bits(self.field),
+        result["best attack"] = get_best_attack_security(
+            field_size=self.F,
             rho=self.rho,
-            batch_size=self.batch_size,
             num_queries=self.num_queries,
-            witness_size=int(self.D),
-            D=self.D,
-            F=self.F,
-            FRI_rounds_n=self.FRI_rounds_n,
-            power_batching=self.power_batching,
-            field_extension_degree=int(self.field_extension_degree),
-            early_stop_degree=int(self.FRI_early_stop_degree),
-            folding_factor=int(self.FRI_folding_factor),
-            grinding_query_phase=self.grinding_query_phase,
-            trace_length=self.trace_length,
-            max_combo=self.max_combo
+            grinding_query_phase=self.grinding_query_phase
         )
-        result["best attack"] = best_attack_security(fri_parameters)
 
         return result
 
