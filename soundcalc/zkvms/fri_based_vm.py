@@ -31,11 +31,11 @@ def get_DEEP_ALI_errors(L_plus: float, params: FRIBasedVM):
     # We might want to generalize this further for other zkEVMs.
     # For example, Miden also computes similar values for DEEP-ALI in:
     # https://github.com/facebook/winterfell/blob/2f78ee9bf667a561bdfcdfa68668d0f9b18b8315/air/src/proof/security.rs#L188-L210
-    e_ALI = L_plus * params.num_columns / params.F
+    e_ALI = L_plus * params.num_columns / params.field_size
     e_DEEP = (
         L_plus
         * (params.AIR_max_degree * (params.trace_length + params.max_combo - 1) + (params.trace_length - 1))
-        / (params.F - params.trace_length - params.D)
+        / (params.field_size - params.trace_length - params.D)
     )
 
     levels = {}
@@ -130,7 +130,7 @@ class FRIBasedVM(zkVM):
         self.field_extension_degree = config.field.field_extension_degree
         # Extension field size |F| = p^{ext_size}
         self.field = config.field
-        self.F = config.field.F
+        self.field_size = config.field.F
 
         # Compute number of FRI folding rounds
         self.FRI_rounds_n = get_num_FRI_folding_rounds(
@@ -247,7 +247,7 @@ class FRIBasedVM(zkVM):
 
 
         result["best attack"] = get_best_attack_security(
-            field_size=self.F,
+            field_size=self.field_size,
             rho=self.rho,
             num_queries=self.num_queries,
             grinding_query_phase=self.grinding_query_phase
