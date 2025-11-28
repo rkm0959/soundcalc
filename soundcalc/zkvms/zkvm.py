@@ -1,19 +1,21 @@
+from __future__ import annotations
 
 
-class zkVM:
+class Circuit:
     """
-    A class modeling a zkVM.
+    A class modeling a single circuit within a zkVM.
+    Each circuit has its own parameters and security analysis.
     """
 
     def get_name(self) -> str:
         """
-        Returns the name of the zkVM.
+        Returns the name of the circuit.
         """
         raise NotImplementedError
 
     def get_parameter_summary(self) -> str:
         """
-        Returns a description of the parameters of the zkVM.
+        Returns a description of the parameters of the circuit.
         The description is given as a string.
         """
         raise NotImplementedError
@@ -35,5 +37,23 @@ class zkVM:
         It maps from a label that explains which round it is for to an integer.
         If this integer is, say, k, then it means the error for this round is at
         most 2^{-k}.
+        """
+        raise NotImplementedError
+
+
+class zkVM:
+    """
+    A class modeling a zkVM, which contains one or more circuits.
+    """
+
+    def get_name(self) -> str:
+        """
+        Returns the name of the zkVM.
+        """
+        raise NotImplementedError
+
+    def get_circuits(self) -> list[Circuit]:
+        """
+        Returns the list of circuits in this zkVM.
         """
         raise NotImplementedError

@@ -10,13 +10,13 @@ from soundcalc.proxgaps.johnson_bound import JohnsonBoundRegime
 from soundcalc.proxgaps.proxgaps_regime import ProximityGapsRegime
 from soundcalc.proxgaps.unique_decoding import UniqueDecodingRegime
 from soundcalc.zkvms.best_attack import get_best_attack_security
-from soundcalc.zkvms.zkvm import zkVM
+from soundcalc.zkvms.zkvm import Circuit, zkVM
 from ..common.fields import FieldParams, field_element_size_bits
 from ..common.fri import get_FRI_proof_size_bits, get_num_FRI_folding_rounds
 
 
 
-def get_DEEP_ALI_errors(L_plus: float, params: FRIBasedVM):
+def get_DEEP_ALI_errors(L_plus: float, params: "FRIBasedCircuit"):
     """
     Compute common proof system error components that are shared across regimes.
     Some of them depend on the list size L_plus
@@ -90,9 +90,9 @@ class FRIBasedVMConfig:
     grinding_query_phase: int
 
 
-class FRIBasedVM(zkVM):
+class FRIBasedCircuit(Circuit):
     """
-    Models a zkVM that is based on FRI.
+    Models a single circuit that is based on FRI.
     """
     def __init__(self, config: FRIBasedVMConfig):
         """
@@ -320,3 +320,19 @@ class FRIBasedVM(zkVM):
         epsilon *= 2 ** (-self.grinding_query_phase)
 
         return epsilon
+
+
+class FRIBasedVM(zkVM):
+    """
+    A zkVM that contains one or more FRI-based circuits.
+    """
+
+    def __init__(self, name: str, circuits: list[FRIBasedCircuit]):
+        self._name = name
+        self._circuits = circuits
+
+    def get_name(self) -> str:
+        return self._name
+
+    def get_circuits(self) -> list[FRIBasedCircuit]:
+        return self._circuits

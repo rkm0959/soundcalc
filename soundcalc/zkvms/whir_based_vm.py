@@ -6,7 +6,7 @@ from soundcalc.common.utils import get_bits_of_security_from_error, get_size_of_
 from soundcalc.proxgaps.johnson_bound import JohnsonBoundRegime
 from soundcalc.proxgaps.proxgaps_regime import ProximityGapsRegime
 from soundcalc.proxgaps.unique_decoding import UniqueDecodingRegime
-from soundcalc.zkvms.zkvm import zkVM
+from soundcalc.zkvms.zkvm import Circuit, zkVM
 from typing import Tuple
 import math
 
@@ -86,9 +86,9 @@ class WHIRBasedVMConfig:
 
 
 
-class WHIRBasedVM(zkVM):
+class WHIRBasedCircuit(Circuit):
     """
-    Models a zkVM that is based on WHIR.
+    Models a single circuit that is based on WHIR.
     """
     def __init__(self, config: WHIRBasedVMConfig):
         """
@@ -468,3 +468,19 @@ class WHIRBasedVM(zkVM):
             grinding_sum += sum([2 ** g for g in iteration_g])
 
         return round(math.log2(grinding_sum), 2)
+
+
+class WHIRBasedVM(zkVM):
+    """
+    A zkVM that contains one or more WHIR-based circuits.
+    """
+
+    def __init__(self, name: str, circuits: list[WHIRBasedCircuit]):
+        self._name = name
+        self._circuits = circuits
+
+    def get_name(self) -> str:
+        return self._name
+
+    def get_circuits(self) -> list[WHIRBasedCircuit]:
+        return self._circuits
