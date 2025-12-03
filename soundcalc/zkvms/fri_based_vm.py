@@ -11,11 +11,34 @@ from soundcalc.common.utils import get_bits_of_security_from_error
 from soundcalc.proxgaps.johnson_bound import JohnsonBoundRegime
 from soundcalc.proxgaps.proxgaps_regime import ProximityGapsRegime
 from soundcalc.proxgaps.unique_decoding import UniqueDecodingRegime
-from soundcalc.zkvms.best_attack import get_best_attack_security
 from soundcalc.zkvms.zkvm import Circuit, zkVM
 from ..common.fields import FieldParams, field_element_size_bits, parse_field
 from ..common.fri import get_FRI_proof_size_bits, get_num_FRI_folding_rounds
 
+
+def get_best_attack_security(field_size: float, rho: float, num_queries: int, grinding_query_phase: int) -> int:
+    """
+    Security level based on the best known attack.
+
+    Currently, this is based on the toy problem also known as "ethSTARK conjecture".
+    It uses the simplest and probably the most optimistic soundness analysis.
+
+    Note: this is just for historical reference, the toy problem security has no real meaning.
+
+    This is Regime 1 from the RISC0 Python calculator
+    """
+
+    # FRI errors under the toy problem regime
+    # see "Toy problem security" in §5.9.1 of the ethSTARK paper
+    commit_phase_error = 1 / field_size
+    query_phase_error_without_grinding = rho ** num_queries
+    # Add bits of security from grinding (see section 6.3 in ethSTARK)
+    query_phase_error_with_grinding = query_phase_error_without_grinding * 2 ** (-grinding_query_phase)
+
+    final_error = commit_phase_error + query_phase_error_with_grinding
+    final_level = get_bits_of_security_from_error(final_error)
+
+    return final_level
 
 
 def get_DEEP_ALI_errors(L_plus: float, params: "FRIBasedCircuit"):
