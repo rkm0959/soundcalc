@@ -403,17 +403,22 @@ class WHIRBasedCircuit(Circuit):
         # This includes the initial variable count plus the rate expansion.
         initial_domain_log_size = self.log_degrees[0] + self.log_inv_rates[0]
 
-        # The field must have high enough 2-adicity to support FFTs on this domain.
+        # We use Interleaved Reed-Solomon codes (Lemma 4.4).
         #
-        # For a field F_p, we require 2^s | (p-1) where s >= domain_log_size.
+        # We effectively decompose the polynomial into 2^k smaller polynomials
+        # (where k = folding_factor).
         #
-        # If this assertion fails, the parameters are mathematically impossible
-        # to instantiate on this specific field.
-        assert initial_domain_log_size <= self.field.two_adicity, (
-            f"Field {self.field.name} 2-adicity ({self.field.two_adicity}) is too low "
-            f"for the required initial domain size 2^{initial_domain_log_size}.\n"
-            f"  - Log Degree: {self.log_degrees[0]}\n"
-            f"  - Log Inv Rate: {self.log_inv_rates[0]}"
+        # The FFTs are performed on the smaller domain of size |L| / 2^k.
+        # Therefore, the field's 2-adicity only needs to support this smaller domain.
+        #
+        # Requirement: log2(|L|) - k <= two_adicity
+        required_two_adicity = initial_domain_log_size - self.folding_factor
+
+        assert required_two_adicity <= self.field.two_adicity, (
+            f"Field {self.field.name} 2-adicity ({self.field.two_adicity}) is too low.\n"
+            f"  - Logical Domain Size: 2^{initial_domain_log_size}\n"
+            f"  - Folding Factor: {self.folding_factor}\n"
+            f"  - Required 2-adicity: {required_two_adicity} (Domain / 2^k)"
         )
 
         # Array length consistency checks
