@@ -81,7 +81,7 @@ class WHIRBasedVMConfig:
     #
     # **NOTE**: One WHIR iteration corresponds to multiple sumcheck rounds.
     #
-    # A single WHIR iteration reduces the polynomial dimension by $k$.
+    # A single WHIR iteration reduces the number of variable $m$ by $k$.
     # To do this, it runs a sumcheck protocol as a sub-routine.
     #
     # Therefore, one iteration consists of:
