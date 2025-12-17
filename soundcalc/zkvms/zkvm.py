@@ -94,6 +94,7 @@ class zkVM:
                 num_iterations=section["num_iterations"],
                 folding_factor=section["folding_factor"],
                 field=field,
+                proximity_gap=section.get("proximity_gap"),
                 log_degree=section["log_degree"],
                 batch_size=section["batch_size"],
                 power_batching=section["power_batching"],
@@ -109,6 +110,7 @@ class zkVM:
                 name=section["name"],
                 pcs=pcs,
                 field=field,
+                proximity_gap=section.get("proximity_gap")
             ))
             circuits.append(circuit)
 
