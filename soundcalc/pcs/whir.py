@@ -6,7 +6,8 @@ from dataclasses import dataclass
 from soundcalc.common.fields import FieldParams
 from soundcalc.common.utils import (
     get_bits_of_security_from_error,
-    get_size_of_merkle_path_bits,
+    get_size_of_merkle_multi_proof_bits,
+    get_size_of_merkle_proof_bits,
 )
 from soundcalc.pcs.pcs import PCS
 from soundcalc.proxgaps.proxgaps_regime import ProximityGapsRegime
@@ -737,7 +738,7 @@ class WHIR(PCS):
 
         return round(math.log2(grinding_sum), 2)
 
-    def get_proof_size_bits(self) -> int:
+    def _get_proof_size_bits(self, expected: bool) -> int:
         # We estimate the proof size by looking at the WHIR paper, counting sizes of prover messages.
         # Note that verifier messages do not count into proof size, as they are obtained from Fiat-Shamir.
         # Here, messages are either field elements, polynomials, functions, or function evaluations.
@@ -855,15 +856,18 @@ class WHIR(PCS):
             else:
                 tuple_size = block_size
 
-            merkle_path_size = get_size_of_merkle_path_bits(
-                num_leafs=num_leafs,
-                tuple_size=tuple_size,
-                element_size_bits=current_element_bits,
-                hash_size_bits=self.hash_size_bits,
-            )
-            proof_size += self.num_queries[i] * merkle_path_size
+            merkle_multi_proof_size = get_size_of_merkle_multi_proof_bits(num_leafs, self.num_queries[i], tuple_size, current_element_bits, self.hash_size_bits, expected)
+            proof_size += merkle_multi_proof_size
 
         return proof_size
+
+    def get_proof_size_bits(self) -> int:
+        """Returns estimated proof size in bits."""
+        return self._get_proof_size_bits(expected=False)
+
+    def get_expected_proof_size_bits(self) -> int:
+        """Returns estimated *expected* proof size in bits."""
+        return self._get_proof_size_bits(expected=True)
 
     def get_rate(self) -> float:
         return 2 ** (-self.log_inv_rates[0])

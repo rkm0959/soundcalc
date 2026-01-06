@@ -294,7 +294,7 @@ def build_zkvm_report(zkvm: zkVM, multi_circuit: bool = False) -> str:
     lines.append("- Table rows correspond to security regimes")
     lines.append("- Table columns correspond to proof system components")
     lines.append("- Cells show bits of security per component")
-    lines.append("- Proof size estimate is only indicative")
+    lines.append("- Proof size estimates are indicative (1 KiB = 1024 bytes)")
     lines.append("")
 
     circuits = zkvm.get_circuits()
@@ -304,12 +304,16 @@ def build_zkvm_report(zkvm: zkVM, multi_circuit: bool = False) -> str:
         overview = _compute_overview_stats(circuits)
 
         if overview:
-            lines.append("## zkEVM Overview")
+            lines.append("## zkVM Overview")
             lines.append("")
-            lines.append(f"| Metric | Value |")
-            lines.append(f"| --- | --- |")
-            lines.append(f"| Final proof size | **{overview['final_proof_size_kib']:.1f} KiB** (circuit: {overview['final_circuit_name']}) |")
-            lines.append(f"| Final bits of security | **{overview['min_security_bits']}** ({overview['best_regime']}, circuit: {overview['offending_circuit']}) |")
+            final_circuit = overview['final_circuit_name']
+            final_circuit_link = f"[{final_circuit}](#{final_circuit.lower().replace(' ', '-')})"
+            offending_circuit = overview['offending_circuit']
+            offending_circuit_link = f"[{offending_circuit}](#{offending_circuit.lower().replace(' ', '-')})"
+            lines.append(f"| Metric | Value | Relevant circuit | Notes |")
+            lines.append(f"| --- | --- | --- | --- |")
+            lines.append(f"| Final proof size (worst case) | **{int(overview['final_proof_size_kib'])} KiB** | {final_circuit_link} | |")
+            lines.append(f"| Final bits of security | **{overview['min_security_bits']} bits** | {offending_circuit_link} | Regime: {overview['best_regime']} |")
             lines.append("")
 
         lines.append("## Circuits")
@@ -328,8 +332,9 @@ def build_zkvm_report(zkvm: zkVM, multi_circuit: bool = False) -> str:
             lines.append("")
 
             # Proof size
-            proof_size_kib = circuit.get_proof_size_bits() // KIB
-            lines.append(f"**Proof Size Estimate:** {proof_size_kib} KiB, where 1 KiB = 1024 bytes")
+            expected_kib = int(circuit.get_expected_proof_size_bits() // KIB)
+            worst_kib = int(circuit.get_proof_size_bits() // KIB)
+            lines.append(f"**Proof Size:** {expected_kib} KiB (expected) / {worst_kib} KiB (worst case)")
             lines.append("")
 
             # Security table
@@ -346,8 +351,9 @@ def build_zkvm_report(zkvm: zkVM, multi_circuit: bool = False) -> str:
             lines.append("")
 
             # Proof size
-            proof_size_kib = circuit.get_proof_size_bits() // KIB
-            lines.append(f"**Proof Size Estimate:** {proof_size_kib} KiB, where 1 KiB = 1024 bytes")
+            expected_kib = int(circuit.get_expected_proof_size_bits() // KIB)
+            worst_kib = int(circuit.get_proof_size_bits() // KIB)
+            lines.append(f"**Proof Size:** {expected_kib} KiB (expected) / {worst_kib} KiB (worst case)")
             lines.append("")
 
             # Security table

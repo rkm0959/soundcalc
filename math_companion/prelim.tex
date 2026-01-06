@@ -2,7 +2,13 @@
 
 \subsection{Fields}
 
-Fields of size $q$ are denoted as $\FFF_q$ or simply $\FFF$.
+Fields of size $q$ are denoted as $\FFF_q$ or simply $\FFF$. Currently supported prime fields:
+\begin{itemize}
+    \item KoalaBear: $q=2^{31}-2^{24}+1$
+    \item Goldilocks: $q=2^{64}-2^{32}+1$
+    \item Mersenne31: $q=2^{31}-1$
+    \item BN254: $q=21888242871839275222246405745257275088548364400416034343698204186575808495617$
+\end{itemize}
 
 \subsection{Regime-specific bounds}
 
@@ -25,8 +31,8 @@ In JBR we compute the $\delta$ differently.
 
 \begin{equation}\label{eq:pp_jbr}
     \delta_J(\rho,N,q) =\begin{cases}
-    1-\sqrt{\rho}-\frac{1}{N}&\quad \text{ if }q>2^{150}\\
-    1-\sqrt{\rho}-\frac{\rho}{20}&\quad \text{ otherwise}
+    1-\sqrt{\rho}-\frac{\sqrt{\rho}}{100}&\quad \text{ if }q>2^{150}\\
+    1-\sqrt{\rho}-\max(\frac{\rho}{20},\frac{\sqrt{\rho}}{100})&\quad \text{ otherwise}
     \end{cases}
 \end{equation}
 
@@ -80,3 +86,22 @@ For UDR :
     $$
 
 \end{itemize}
+
+
+
+\subsubsection{DEEP-ALI errors}\label{sec:fri-deep-ali}
+\begin{verbatim}circuit.py/get_DEEP_ALI_errors()\end{verbatim}
+
+For parameters:
+\begin{itemize}
+    \item Number of columns: $C=$ \verb|num_columns|
+    \item AIR degree: $d =$ \verb|AIR_max_degree|
+    \item Trace increase constant [Hab22, Remark7]: $m_c$ \verb|max_combo|
+    \item Trace length: $N$
+    \item List size: $\ell$ as in \cref{sec:fri_list_sizes}
+\end{itemize}
+
+The DEEP-ALI soundness error is computed as follows:
+\begin{equation}
+    \edeep = \max\left(\frac{\ell\cdot C}{2^{\bfield}}, \frac{\ell(d(N+m_c-1)+(N-1))}{2^{\bfield}-N-N/\rho}\right)
+\end{equation}

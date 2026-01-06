@@ -11,7 +11,7 @@
   \item Number of iterations: \(M = \texttt{num\_iterations}\)
   \item Iteration index: \(i \in \{0,\dots,M-1\}\)
   \item Folding round index: \(s \in \{0,\dots,k-1\}\)
-  \item Field size: \(|\mathbb{F}| = q\)
+  \item Extension field size: \(|\mathbb{F}| = \bfield\)
   \item Constraint degree: \(d = \texttt{constraint\_degree}\)
   \item Folding factor: \(k = \texttt{folding\_factor}\)
   \item Log-degree in iteration \(i\): \(m_i = \texttt{log\_degrees}[i]\), and we set $m_i = m_0-k\cdot i$
@@ -71,8 +71,8 @@ In the Johnson Bound Regime (JBR) we proceed as follows:
 \[
 \varepsilon_{\mathrm{batch}, JBR}^{\text{base}} =
 \begin{cases}
-   \ebatchpowJ(\rho,N,q,B) & \text{(power batching)}, \\[4pt]
-  \ebatchlinJ(\rho,N,q)& \text{(linear batching)}.
+   \ebatchpowJ(\rho,N,\bfield,B) & \text{(power batching)}, \\[4pt]
+  \ebatchlinJ(\rho,N,\bfield)& \text{(linear batching)}.
 \end{cases}
 \]
 \end{itemize}
@@ -113,15 +113,15 @@ counts folding rounds from \(1\) to \(k\), whereas here we count from \(0\) to \
 Base error (two terms):
 \[
   \varepsilon^{\mathrm{fold,base,J}}_{i,s}
-    = d \cdot \frac{\ell_{i,s}}{q}
-      + \ebatchpowJ(\CC_{i,s+1}[\rho],\CC_{i,s+1}[N],q,B=2).
+    = d \cdot \frac{\ell_{i,s}}{\bfield}
+      + \ebatchpowJ(\CC_{i,s+1}[\rho],\CC_{i,s+1}[N],\bfield,B=2).
 \]
 \end{itemize} And in UDR the base error is
 
 \[
   \varepsilon^{\mathrm{fold,base,U}}_{i,s}
-    =  \frac{d}{q}
-      + \ebatchpowU(\CC_{i,s+1}[\rho],\CC_{i,s+1}[N],q,B=2).
+    =  \frac{d}{\bfield}
+      + \ebatchpowU(\CC_{i,s+1}[\rho],\CC_{i,s+1}[N],\bfield,B=2).
 \]
 
 After grinding:
@@ -242,18 +242,18 @@ This section summarizes the proof-size formula computed in \verb|get_proof_size_
 
 Thus the folding proof size per round is
 \[
-  S_{\mathrm{sumcheck}} = k(d-1)q.
+  S_{\mathrm{sumcheck}} = k(d-1)\bfield.
 \]
 
 \subsection{OOD Proof Size for Iteration \(i\)}
 
 \[
   S_{\mathrm{ood},i}
-    = \bhash+w_iq+k(d-1)q
+    = \bhash+w_iq+k(d-1)\bfield
 \]
 
 $$
-S_{\mathrm{ood},M}=2^{m_M}q
+S_{\mathrm{ood},M}=2^{m_M}\bfield
 $$
 
 \subsection{Query Proof Size for Iteration \(i\)}
