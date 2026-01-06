@@ -392,8 +392,9 @@ def build_summary_report(zkvms: list[zkVM]) -> str:
     )
 
     for s in summaries:
+        report_filename = f"{s.name.lower().replace(' ', '_')}.md"
         lines.append(
-            f"| {s.name} | {s.field} | {s.num_circuits} | {s.weakest_circuit_name} "
+            f"| [{s.name}]({report_filename}) | {s.field} | {s.num_circuits} | {s.weakest_circuit_name} "
             f"| {s.udr_total_bits} | {s.jbr_total_bits} | {s.final_proof_size_kib:.1f} KiB |"
         )
 

@@ -34,7 +34,7 @@ def generate_and_save_reports(zkvms: list[zkVM]) -> None:
 
     # Generate unified summary report
     summary_md = build_summary_report(zkvms)
-    summary_path = os.path.join(REPORTS_DIR, "summary.md")
+    summary_path = os.path.join(REPORTS_DIR, "report.md")
     with open(summary_path, "w", encoding="utf-8") as f:
         f.write(summary_md)
     print(f"wrote :: {summary_path}")
