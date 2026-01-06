@@ -10,7 +10,7 @@ How to read this report:
 
 | Metric | Value |
 | --- | --- |
-| Final proof size | **282.0 KiB** (circuit: Final) |
+| Final proof size | **250.0 KiB** (circuit: Final) |
 | Final bits of security | **128** (JBR, circuit: Main) |
 
 ## Circuits
@@ -60,7 +60,7 @@ How to read this report:
 - Batch size: 61
 - Batching: Powers
 
-**Proof Size Estimate:** 1292.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 890.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -85,7 +85,7 @@ How to read this report:
 - Batch size: 18
 - Batching: Powers
 
-**Proof Size Estimate:** 1056.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 656.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -110,7 +110,7 @@ How to read this report:
 - Batch size: 29
 - Batching: Powers
 
-**Proof Size Estimate:** 1120.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 718.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -135,7 +135,7 @@ How to read this report:
 - Batch size: 19
 - Batching: Powers
 
-**Proof Size Estimate:** 997.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 603.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -160,7 +160,7 @@ How to read this report:
 - Batch size: 27
 - Batching: Powers
 
-**Proof Size Estimate:** 1040.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 646.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -185,7 +185,7 @@ How to read this report:
 - Batch size: 59
 - Batching: Powers
 
-**Proof Size Estimate:** 1217.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 821.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -210,7 +210,7 @@ How to read this report:
 - Batch size: 25
 - Batching: Powers
 
-**Proof Size Estimate:** 1093.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 694.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -235,7 +235,7 @@ How to read this report:
 - Batch size: 18
 - Batching: Powers
 
-**Proof Size Estimate:** 1056.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 656.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -260,7 +260,7 @@ How to read this report:
 - Batch size: 23
 - Batching: Powers
 
-**Proof Size Estimate:** 1082.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 683.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -285,7 +285,7 @@ How to read this report:
 - Batch size: 64
 - Batching: Powers
 
-**Proof Size Estimate:** 1244.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 848.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -310,7 +310,7 @@ How to read this report:
 - Batch size: 49
 - Batching: Powers
 
-**Proof Size Estimate:** 1227.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 826.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -335,7 +335,7 @@ How to read this report:
 - Batch size: 18
 - Batching: Powers
 
-**Proof Size Estimate:** 1056.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 656.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -360,7 +360,7 @@ How to read this report:
 - Batch size: 40
 - Batching: Powers
 
-**Proof Size Estimate:** 1179.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 777.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -385,7 +385,7 @@ How to read this report:
 - Batch size: 69
 - Batching: Powers
 
-**Proof Size Estimate:** 1165.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 816.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -410,7 +410,7 @@ How to read this report:
 - Batch size: 434
 - Batching: Powers
 
-**Proof Size Estimate:** 3151.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 2799.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -435,7 +435,7 @@ How to read this report:
 - Batch size: 536
 - Batching: Powers
 
-**Proof Size Estimate:** 3720.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 3366.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -460,7 +460,7 @@ How to read this report:
 - Batch size: 4065
 - Batching: Powers
 
-**Proof Size Estimate:** 21244.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 20975.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -485,7 +485,7 @@ How to read this report:
 - Batch size: 1265
 - Batching: Powers
 
-**Proof Size Estimate:** 7549.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 7215.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -510,7 +510,7 @@ How to read this report:
 - Batch size: 88
 - Batching: Powers
 
-**Proof Size Estimate:** 1267.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 918.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -535,7 +535,7 @@ How to read this report:
 - Batch size: 69
 - Batching: Powers
 
-**Proof Size Estimate:** 1270.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 875.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -560,7 +560,7 @@ How to read this report:
 - Batch size: 90
 - Batching: Powers
 
-**Proof Size Estimate:** 1384.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 989.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -585,7 +585,7 @@ How to read this report:
 - Batch size: 198
 - Batching: Powers
 
-**Proof Size Estimate:** 871.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 726.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -610,7 +610,7 @@ How to read this report:
 - Batch size: 198
 - Batching: Powers
 
-**Proof Size Estimate:** 871.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 726.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -635,7 +635,7 @@ How to read this report:
 - Batch size: 198
 - Batching: Powers
 
-**Proof Size Estimate:** 940.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 771.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -660,7 +660,7 @@ How to read this report:
 - Batch size: 198
 - Batching: Powers
 
-**Proof Size Estimate:** 892.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 743.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -685,7 +685,7 @@ How to read this report:
 - Batch size: 145
 - Batching: Powers
 
-**Proof Size Estimate:** 487.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 398.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -710,7 +710,7 @@ How to read this report:
 - Batch size: 152
 - Batching: Powers
 
-**Proof Size Estimate:** 282.0 KiB, where 1 KiB = 1024 bytes
+**Proof Size Estimate:** 250.0 KiB, where 1 KiB = 1024 bytes
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
