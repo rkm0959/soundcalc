@@ -10,6 +10,7 @@ from soundcalc.zkvms.zkvm import zkVM
 
 
 REPORTS_DIR = "reports"
+SUMMARY_REPORT_NAME = "summary.md"
 
 
 def generate_and_save_reports(zkvms: list[zkVM]) -> None:
@@ -34,7 +35,7 @@ def generate_and_save_reports(zkvms: list[zkVM]) -> None:
 
     # Generate unified summary report
     summary_md = build_summary_report(zkvms)
-    summary_path = os.path.join(REPORTS_DIR, "report.md")
+    summary_path = os.path.join(REPORTS_DIR, SUMMARY_REPORT_NAME)
     with open(summary_path, "w", encoding="utf-8") as f:
         f.write(summary_md)
     print(f"wrote :: {summary_path}")

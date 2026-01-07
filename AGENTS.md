@@ -60,4 +60,5 @@ See `soundcalc/zkvms/pico/pico.toml` for a well-documented example.
 
 Running `python3 -m soundcalc` generates:
 - Console output with per-circuit security levels
-- `results.md` with formatted Markdown tables
+- `reports/summary.md` with a comparison table across all zkVMs
+- `reports/<zkvm>.md` with detailed per-zkVM reports (e.g., `reports/pico.md`)
