@@ -47,6 +47,7 @@ See `soundcalc/zkvms/pico/pico.toml` for a well-documented example.
 **Code style:**
 - Avoid `@property` decorators and getter/setter methods. Prefer direct attribute access.
 - Prefix private methods with underscores (e.g., `_helper_method`).
+- Group imports: stdlib imports first, blank line, then soundcalc modules.
 
 **Comments:**
 - When moving code, preserve original comments. Don't modify non-trivial comments without asking first.

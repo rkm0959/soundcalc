@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from math import log2
 from typing import Optional
+
 from soundcalc.common.fields import FieldParams
 from soundcalc.common.utils import get_bits_of_security_from_error, get_size_of_merkle_multi_proof_bits, get_size_of_merkle_proof_bits
 from soundcalc.pcs.pcs import PCS

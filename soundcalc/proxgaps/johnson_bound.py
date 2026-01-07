@@ -1,7 +1,7 @@
-from soundcalc.proxgaps.proxgaps_regime import ProximityGapsRegime
+import math
 from typing import Optional
 
-import math
+from soundcalc.proxgaps.proxgaps_regime import ProximityGapsRegime
 
 class JohnsonBoundRegime(ProximityGapsRegime):
     """
