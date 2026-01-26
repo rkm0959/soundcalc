@@ -32,7 +32,7 @@ How to read this report:
 - FRI rounds: 22
 - FRI folding factors: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 - FRI early stop degree: 2
-- Number of columns: 11366
+- Number of constraints: 11366
 - Batch size: 14162
 - Batching: Powers
 
@@ -57,7 +57,7 @@ How to read this report:
 - FRI rounds: 23
 - FRI folding factors: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 - FRI early stop degree: 2
-- Number of columns: 885
+- Number of constraints: 885
 - Batch size: 1798
 - Batching: Powers
 
@@ -82,7 +82,7 @@ How to read this report:
 - FRI rounds: 21
 - FRI folding factors: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 - FRI early stop degree: 4
-- Number of columns: 801
+- Number of constraints: 801
 - Batch size: 1472
 - Batching: Powers
 

@@ -17,7 +17,7 @@ How to read this report:
 - FRI rounds: 5
 - FRI folding factors: [16, 16, 16, 8, 8]
 - FRI early stop degree: 128
-- Number of columns: 1224
+- Number of constraints: 928
 - Batch size: 1225
 - Batching: Powers
 
@@ -25,5 +25,5 @@ How to read this report:
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 64 | 113 | 98 | 88 | 99 | 103 | 107 | 111 | 114 | 64 |
-| JBR | 63 | 108 | 93 | 63 | 73 | 77 | 81 | 85 | 88 | 67 |
+| UDR | 64 | 114 | 98 | 88 | 99 | 103 | 107 | 111 | 114 | 64 |
+| JBR | 63 | 109 | 93 | 63 | 73 | 77 | 81 | 85 | 88 | 67 |

@@ -10,7 +10,7 @@ How to read this report:
 
 | Metric | Value | Relevant circuit | Notes |
 | --- | --- | --- | --- |
-| Final proof size (worst case) | **282 KiB** | [Final](#final) | |
+| Final proof size (worst case) | **313 KiB** | [Final_Compressed](#final_compressed) | |
 | Final bits of security | **128 bits** | [Main](#main) | Regime: JBR |
 
 ## Circuits
@@ -33,6 +33,7 @@ How to read this report:
 - [ArithEq384](#aritheq384)
 - [Keccakf](#keccakf)
 - [Sha256f](#sha256f)
+- [Poseidon2](#poseidon2)
 - [SpecifiedRanges](#specifiedranges)
 - [VirtualTable0](#virtualtable0)
 - [VirtualTable1](#virtualtable1)
@@ -40,8 +41,10 @@ How to read this report:
 - [ArithEq384-compressor](#aritheq384-compressor)
 - [Keccakf-compressor](#keccakf-compressor)
 - [Sha256f-compressor](#sha256f-compressor)
+- [SpecifiedRanges-compressor](#specifiedranges-compressor)
 - [Recursive2](#recursive2)
 - [Final](#final)
+- [Final_Compressed](#final_compressed)
 
 ## Main
 
@@ -56,7 +59,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 146
+- Number of constraints: 146
 - Batch size: 61
 - Batching: Powers
 
@@ -81,7 +84,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 3
+- Number of constraints: 3
 - Batch size: 18
 - Batching: Powers
 
@@ -106,7 +109,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 34
+- Number of constraints: 34
 - Batch size: 29
 - Batching: Powers
 
@@ -131,7 +134,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 4]
 - FRI early stop degree: 32
-- Number of columns: 23
+- Number of constraints: 23
 - Batch size: 19
 - Batching: Powers
 
@@ -156,7 +159,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 4]
 - FRI early stop degree: 32
-- Number of columns: 26
+- Number of constraints: 26
 - Batch size: 27
 - Batching: Powers
 
@@ -181,7 +184,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 4]
 - FRI early stop degree: 32
-- Number of columns: 40
+- Number of constraints: 40
 - Batch size: 59
 - Batching: Powers
 
@@ -206,7 +209,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 16
+- Number of constraints: 16
 - Batch size: 25
 - Batching: Powers
 
@@ -231,7 +234,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 10
+- Number of constraints: 10
 - Batch size: 18
 - Batching: Powers
 
@@ -256,7 +259,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 15
+- Number of constraints: 15
 - Batch size: 23
 - Batching: Powers
 
@@ -281,7 +284,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 4]
 - FRI early stop degree: 32
-- Number of columns: 65
+- Number of constraints: 65
 - Batch size: 64
 - Batching: Powers
 
@@ -306,7 +309,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 14
+- Number of constraints: 14
 - Batch size: 49
 - Batching: Powers
 
@@ -331,7 +334,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 9
+- Number of constraints: 9
 - Batch size: 18
 - Batching: Powers
 
@@ -356,7 +359,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 8
+- Number of constraints: 8
 - Batch size: 40
 - Batching: Powers
 
@@ -381,7 +384,7 @@ How to read this report:
 - FRI rounds: 5
 - FRI folding factors: [8, 8, 8, 8, 8]
 - FRI early stop degree: 64
-- Number of columns: 36
+- Number of constraints: 36
 - Batch size: 69
 - Batching: Powers
 
@@ -406,7 +409,7 @@ How to read this report:
 - FRI rounds: 5
 - FRI folding factors: [8, 8, 8, 8, 8]
 - FRI early stop degree: 64
-- Number of columns: 93
+- Number of constraints: 93
 - Batch size: 434
 - Batching: Powers
 
@@ -431,7 +434,7 @@ How to read this report:
 - FRI rounds: 5
 - FRI folding factors: [8, 8, 8, 8, 8]
 - FRI early stop degree: 64
-- Number of columns: 76
+- Number of constraints: 76
 - Batch size: 536
 - Batching: Powers
 
@@ -456,7 +459,7 @@ How to read this report:
 - FRI rounds: 4
 - FRI folding factors: [8, 8, 8, 8]
 - FRI early stop degree: 64
-- Number of columns: 2432
+- Number of constraints: 2432
 - Batch size: 4065
 - Batching: Powers
 
@@ -481,7 +484,7 @@ How to read this report:
 - FRI rounds: 5
 - FRI folding factors: [8, 8, 8, 8, 4]
 - FRI early stop degree: 32
-- Number of columns: 115
+- Number of constraints: 115
 - Batch size: 1265
 - Batching: Powers
 
@@ -491,6 +494,31 @@ How to read this report:
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | UDR | 111 | 185 | 171 | 162 | 173 | 176 | 179 | 182 | 185 | 111 |
 | JBR | 128 | 178 | 165 | 128 | 138 | 141 | 144 | 147 | 150 | 128 |
+
+
+## Poseidon2
+
+**Parameters:**
+- Polynomial commitment scheme: FRI
+- Hash size (bits): 256
+- Number of queries: 114
+- Grinding (bits): 16
+- Field: Goldilocks³
+- Rate (ρ): 0.25
+- Trace length (H): $2^{17}$
+- FRI rounds: 5
+- FRI folding factors: [8, 8, 8, 8, 4]
+- FRI early stop degree: 32
+- Number of constraints: 85
+- Batch size: 182
+- Batching: Powers
+
+**Proof Size:** 682 KiB (expected) / 832 KiB (worst case)
+
+| regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| UDR | 93 | 185 | 172 | 165 | 173 | 176 | 179 | 182 | 185 | 93 |
+| JBR | 128 | 177 | 164 | 128 | 135 | 138 | 141 | 144 | 148 | 128 |
 
 
 ## SpecifiedRanges
@@ -506,11 +534,11 @@ How to read this report:
 - FRI rounds: 5
 - FRI folding factors: [8, 8, 8, 8, 8]
 - FRI early stop degree: 64
-- Number of columns: 18
-- Batch size: 88
+- Number of constraints: 16
+- Batch size: 107
 - Batching: Powers
 
-**Proof Size:** 918 KiB (expected) / 1267 KiB (worst case)
+**Proof Size:** 1020 KiB (expected) / 1369 KiB (worst case)
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -531,7 +559,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 4]
 - FRI early stop degree: 32
-- Number of columns: 6
+- Number of constraints: 6
 - Batch size: 69
 - Batching: Powers
 
@@ -556,7 +584,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 4]
 - FRI early stop degree: 32
-- Number of columns: 6
+- Number of constraints: 6
 - Batch size: 90
 - Batching: Powers
 
@@ -581,7 +609,7 @@ How to read this report:
 - FRI rounds: 5
 - FRI folding factors: [8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 179
+- Number of constraints: 179
 - Batch size: 198
 - Batching: Powers
 
@@ -606,7 +634,7 @@ How to read this report:
 - FRI rounds: 5
 - FRI folding factors: [8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 179
+- Number of constraints: 179
 - Batch size: 198
 - Batching: Powers
 
@@ -631,7 +659,7 @@ How to read this report:
 - FRI rounds: 6
 - FRI folding factors: [8, 8, 8, 8, 8, 4]
 - FRI early stop degree: 32
-- Number of columns: 179
+- Number of constraints: 179
 - Batch size: 198
 - Batching: Powers
 
@@ -656,7 +684,7 @@ How to read this report:
 - FRI rounds: 5
 - FRI folding factors: [8, 8, 8, 8, 8]
 - FRI early stop degree: 64
-- Number of columns: 179
+- Number of constraints: 179
 - Batch size: 198
 - Batching: Powers
 
@@ -666,6 +694,31 @@ How to read this report:
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | UDR | 94 | 184 | 170 | 163 | 171 | 174 | 177 | 180 | 183 | 94 |
 | JBR | 128 | 176 | 162 | 128 | 135 | 138 | 141 | 144 | 147 | 128 |
+
+
+## SpecifiedRanges-compressor
+
+**Parameters:**
+- Polynomial commitment scheme: FRI
+- Hash size (bits): 256
+- Number of queries: 110
+- Grinding (bits): 20
+- Field: Goldilocks³
+- Rate (ρ): 0.25
+- Trace length (H): $2^{18}$
+- FRI rounds: 5
+- FRI folding factors: [8, 8, 8, 8, 8]
+- FRI early stop degree: 32
+- Number of constraints: 179
+- Batch size: 198
+- Batching: Powers
+
+**Proof Size:** 726 KiB (expected) / 871 KiB (worst case)
+
+| regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| UDR | 94 | 184 | 171 | 164 | 172 | 175 | 178 | 181 | 184 | 94 |
+| JBR | 128 | 176 | 163 | 128 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
 ## Recursive2
@@ -681,7 +734,7 @@ How to read this report:
 - FRI rounds: 5
 - FRI folding factors: [8, 8, 8, 8, 8]
 - FRI early stop degree: 32
-- Number of columns: 158
+- Number of constraints: 158
 - Batch size: 145
 - Batching: Powers
 
@@ -703,17 +756,42 @@ How to read this report:
 - Field: Goldilocks³
 - Rate (ρ): 0.03125
 - Trace length (H): $2^{16}$
-- FRI rounds: 3
-- FRI folding factors: [16, 16, 16]
-- FRI early stop degree: 512
-- Number of columns: 160
+- FRI rounds: 4
+- FRI folding factors: [16, 16, 16, 16]
+- FRI early stop degree: 32
+- Number of constraints: 160
 - Batch size: 152
 - Batching: Powers
 
-**Proof Size:** 250 KiB (expected) / 282 KiB (worst case)
+**Proof Size:** 266 KiB (expected) / 305 KiB (worst case)
+
+| regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | query phase |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| UDR | 63 | 184 | 172 | 163 | 171 | 175 | 179 | 183 | 63 |
+| JBR | 128 | 174 | 163 | 128 | 135 | 139 | 143 | 147 | 128 |
+
+
+## Final_Compressed
+
+**Parameters:**
+- Polynomial commitment scheme: FRI
+- Hash size (bits): 256
+- Number of queries: 54
+- Grinding (bits): 22
+- Field: Goldilocks³
+- Rate (ρ): 0.0625
+- Trace length (H): $2^{15}$
+- FRI rounds: 3
+- FRI folding factors: [8, 8, 8]
+- FRI early stop degree: 1024
+- Number of constraints: 158
+- Batch size: 145
+- Batching: Powers
+
+**Proof Size:** 269 KiB (expected) / 313 KiB (worst case)
 
 | regime | total | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 63 | 184 | 172 | 163 | 171 | 175 | 179 | 63 |
-| JBR | 128 | 174 | 163 | 128 | 135 | 139 | 143 | 128 |
+| UDR | 71 | 184 | 173 | 165 | 173 | 176 | 179 | 71 |
+| JBR | 128 | 175 | 164 | 129 | 136 | 139 | 142 | 128 |
 
