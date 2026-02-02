@@ -33,8 +33,7 @@ We currently support the following zkEVMs:
 - [ZisK](reports/zisk.md)
 - [Pico](reports/pico.md)
 - [OpenVM](reports/openvm.md)
-- [RISC0](reports/risc0.md)
-- [Miden](reports/miden.md)
+- [Airbender](reports/airbender.md)
 
 We support the following security regimes (see below for explanation of regimes):
 - Unique Decoding Regime (UDR)
