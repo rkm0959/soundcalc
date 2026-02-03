@@ -33,7 +33,7 @@ class LogUpConfig:
     # H: Alphabet size
     alphabet_size_H: int | None = None
     # Proof of Work grinding (expressed in bits of security)
-    grinding_lookup: int = 0
+    grinding_bits_lookup: int = 0
 
     # Reduction error for the Multivariate case (case i or ii)
     reduction_error: float = 0.0
@@ -86,7 +86,7 @@ class LogUp:
         """Returns LogUp soundness in bits of security."""
         total_error = self._calculate_soundness_error()
         #Add grinding
-        total_error *= 2 ** (-self.config.grinding_lookup)
+        total_error *= 2 ** (-self.config.grinding_bits_lookup)
         return get_bits_of_security_from_error(total_error)
 
     def get_name(self) -> str:

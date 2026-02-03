@@ -65,3 +65,11 @@ num_queries = 44
 fri_folding_factors = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 fri_early_stop_degree = 4 # = blowup_factor
 grinding_query_phase = 16
+
+[[circuits.lookups]]
+name = "lookup"
+logup_type = "univariate"
+rows_L = 128  # 2^7 
+rows_T = 0  # one table 
+num_columns_S = 1
+grinding_bits_lookup = 16

@@ -50,3 +50,4 @@ logup_type = "univariate"
 rows_L = 262144  # 2^18 from log_degree
 rows_T = 262144  # same as rows_L for this dummy example
 num_columns_S = 4
+grinding_bits_lookup = 20

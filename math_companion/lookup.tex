@@ -9,7 +9,7 @@ For the sake of the integration and in order to be consistent with parameters, w
 
 The logUP argument proves lookup relations by proving that given a vector $\vec m\in\mathbb{F}^{|\mathbf T|}$ whose elements are either $1$ or $0$, the lookup relation holds if and only if the following euqation is stisfied. 
 
-$$\sum_{\vec l\in\mathbf{L}} \frac{1}{X+  \vec l}=\sum_{\vec t \in \mathbf{T}} \frac{m_{\vec t}}{X- \vec t}$$
+$$\sum_{\vec l\in\mathbf{L}} \frac{1}{X-  \vec l}=\sum_{\vec t \in \mathbf{T}} \frac{m_{\vec t}}{X- \vec t}$$
 
 
 We split the logUP protocol in two steps:
@@ -37,11 +37,11 @@ We consider the following parameters:
 
 The expression 
 
-$$\sum_{i=1}^L \frac{1}{X+ \sum_{s=1}^S \mathbf L_{is}Y^{s-1}}=\sum_{j=1}^T \frac{m_j}{X-\sum_{s=1}^S \mathbf T_{js}Y^{s-1}}$$
+$$\sum_{i=1}^L \frac{1}{X- \sum_{s=1}^S \mathbf L_{is}Y^{s-1}}=\sum_{j=1}^T \frac{m_j}{X-\sum_{s=1}^S \mathbf T_{js}Y^{s-1}}$$
 
 is replaced, upon receiving $\alpha, \beta$ uniformly sampled from $\mathbb{F}$, by the polynomial equality  
 
-$$\sum_{i=1}^L \frac{1}{\alpha+ \sum_{s=1}^S \mathbf L_{is}\beta^{s-1}}\lambda_i(X)=\sum_{j=1}^T \frac{m_j}{\alpha-\sum_{s=1}^S \mathbf T_{js}\beta^{s-1}}\mu_j(X)$$
+$$\sum_{i=1}^L \frac{1}{\alpha- \sum_{s=1}^S \mathbf L_{is}\beta^{s-1}}\lambda_i(X)=\sum_{j=1}^T \frac{m_j}{\alpha-\sum_{s=1}^S \mathbf T_{js}\beta^{s-1}}\mu_j(X)$$
 
 $\lambda_i(X), \mu_j(X)$ being the Lagrange interpolation polynomials of some domains of size $L$ and $T$, respectively.
 
@@ -83,17 +83,17 @@ We consider the following parameters:
 We assume $\mathbf L$ and $\mathbf T$ are padded to have $T=L=H$.
 The expression 
 
-$$\sum_{i=1}^L \frac{1}{X+ \sum_{s=1}^S \mathbf L_{is}Y^{s-1}}=\sum_{j=1}^T \frac{m_j}{X-\sum_{s=1}^S \mathbf T_{js}Y^{s-1}}$$
+$$\sum_{i=1}^L \frac{1}{X- \sum_{s=1}^S \mathbf L_{is}Y^{s-1}}=\sum_{j=1}^T \frac{m_j}{X-\sum_{s=1}^S \mathbf T_{js}Y^{s-1}}$$
 
 is replaced, upon receiving $\alpha$ uniformly sampled from $\mathbb{F}$, by the polynomial equality  
 
-$$\sum_{\vec x\in \Sigma} \frac{1}{\alpha+ L(\vec x)}=\sum_{\vec x\in \Sigma} \frac{m(\vec x)}{\alpha-T(\vec x)}$$
+$$\sum_{\vec x\in \Sigma} \frac{1}{\alpha- L(\vec x)}=\sum_{\vec x\in \Sigma} \frac{m(\vec x)}{\alpha-T(\vec x)}$$
 
 where $\Sigma\in\mathbb{F}^\ell$ and $|\Sigma|=$max$\{TS, LS\}$.
 
 To convert the equation above into a polynomial one, both sides are multiplied by 
 
-$$\prod_{\vec x\in \Sigma}(\alpha + L(\vec x))\prod_{\vec x\in \Sigma}(\alpha + T(\vec x))$$
+$$\prod_{\vec x\in \Sigma}(\alpha - L(\vec x))\prod_{\vec x\in \Sigma}(\alpha - T(\vec x))$$
 
 To prove step number $2.$ of logUP, that is, that these expressions are consistent with $\mathbf L$ and $\mathbf T$, we consider two options: 
 $(i)$ The logUP argument is proven independently of the AIR trace, which adds an error $\epsilon_{\mathsf{logup-sound}}$
