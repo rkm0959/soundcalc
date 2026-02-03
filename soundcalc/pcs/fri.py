@@ -107,6 +107,10 @@ class FRIConfig:
     # Proof of Work grinding compute during FRI query phase (expressed in bits of security)
     grinding_query_phase: int
 
+    # Proof of Work grinding compute during FRI commit phase (expressed in bits of security)
+    # (Protocols apply this level of grinding to every round of the commit phase due to RBR security)
+    grinding_commit_phase: int = 0
+
     # Optional override for the bound *gap*.
     # (This is useful to pin fixed parameters in TOML configs.)
     gap_to_radius: Optional[float] = None
@@ -126,6 +130,7 @@ class FRI(PCS):
         self.FRI_folding_factors = config.FRI_folding_factors
         self.FRI_early_stop_degree = config.FRI_early_stop_degree
         self.grinding_query_phase = config.grinding_query_phase
+        self.grinding_commit_phase = config.grinding_commit_phase
         self.gap_to_radius = config.gap_to_radius
 
         # Negative log of rate
@@ -192,6 +197,9 @@ class FRI(PCS):
         dimension = self.trace_length / acc_folding_factor
 
         epsilon = regime.get_error_powers(rate, dimension, self.FRI_folding_factors[round])
+
+        # add grinding for commit phase
+        epsilon *= 2 ** (-self.grinding_commit_phase)
 
         return epsilon
 
@@ -293,6 +301,7 @@ class FRI(PCS):
             "FRI_early_stop_degree": self.FRI_early_stop_degree,
             "FRI_rounds_n": self.FRI_rounds_n,
             "grinding_query_phase": self.grinding_query_phase,
+            "grinding_commit_phase": self.grinding_commit_phase,
             "field": self.field.to_string(),
             "field_extension_degree": self.field_extension_degree,
         }
