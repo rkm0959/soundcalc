@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from soundcalc.common.fields import FieldParams
-from soundcalc.common.utils import get_bits_of_security_from_error
+from soundcalc.common.utils import apply_grinding, get_bits_of_security_from_error
 from soundcalc.lookups.logup import LogUp
 from soundcalc.pcs.pcs import PCS
 from soundcalc.proxgaps.johnson_bound import JohnsonBoundRegime
@@ -188,7 +188,7 @@ class Circuit:
         )
 
         # take into account any DEEP grinding
-        e_DEEP *= 2 ** (-self.grinding_deep)
+        e_DEEP = apply_grinding(e_DEEP, self.grinding_deep)
 
         levels = {}
         levels["ALI"] = get_bits_of_security_from_error(e_ALI)

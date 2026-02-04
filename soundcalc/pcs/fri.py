@@ -5,7 +5,7 @@ from math import log2
 from typing import Optional
 
 from soundcalc.common.fields import FieldParams
-from soundcalc.common.utils import get_bits_of_security_from_error, get_size_of_merkle_multi_proof_bits, get_size_of_merkle_proof_bits
+from soundcalc.common.utils import apply_grinding, get_bits_of_security_from_error, get_size_of_merkle_multi_proof_bits, get_size_of_merkle_proof_bits
 from soundcalc.pcs.pcs import PCS
 from soundcalc.proxgaps.proxgaps_regime import ProximityGapsRegime
 
@@ -199,7 +199,7 @@ class FRI(PCS):
         epsilon = regime.get_error_powers(rate, dimension, self.FRI_folding_factors[round])
 
         # add grinding for commit phase
-        epsilon *= 2 ** (-self.grinding_commit_phase)
+        epsilon = apply_grinding(epsilon, self.grinding_commit_phase)
 
         return epsilon
 
@@ -215,7 +215,7 @@ class FRI(PCS):
         epsilon = (1 - pp) ** self.num_queries
 
         # add grinding
-        epsilon *= 2 ** (-self.grinding_query_phase)
+        epsilon = apply_grinding(epsilon, self.grinding_query_phase)
 
         return epsilon
 
