@@ -6,22 +6,11 @@
 A universal soundness calculator across hash-based zkEVM proof systems and security regimes.
 
 It aims to answer questions like:
-- "What if RISC0 moves from Babybear⁴ to Goldilocks³?"
-- "What if OpenVM moves from the Toy Problem heuristic to the provable Johnson Bound Regime?"
-- "What if ZisK moves from the Toy Problem heuristic to the provable Unique Decoding Regime?"
+- "What if OpenVM moves from Babybear⁴ to Goldilocks³?"
+- "What if ZisK moves from the Johnson Bound Regime to the Unique Decoding Regime?"
 
 You can run the calculator by doing `python3 -m soundcalc`.
 As a result, the calculator generates / updates reports in [`reports/`](reports/).
-
-## Non-Interactive vs. Interactive Security
-At the moment, soundcalc estimates the security level of the *interactive oracle proof (IOP)* underlying hash-based zkEVM proof systems, for the notion of *[round-by-round soundness](https://eprint.iacr.org/2019/1261.pdf)*.
-That is, security levels are shown for each round, and the total security level is the minimum of all these levels. 
-
-For an explanation why the minimum of these levels also corresponds (roughly) to the security level of the non-interactive construction obtained via the [BCS transform](https://eprint.iacr.org/2016/116.pdf), we refer to the section on round-by-round soundness [here](https://eprint.iacr.org/2025/1993.pdf).
-
-Note that this correspondence holds for classical adversaries, but is different for quantum adversaries in the quantum random oracle model, and we refer to [this work](https://eprint.iacr.org/2025/2166.pdf) for details.
-
-We may integrate the compilation to the non-interactive setting (classically and/or quantumly) in the future.
 
 ## Tests
 
@@ -46,7 +35,9 @@ We support the following security regimes (see below for explanation of regimes)
 We support the following lookup protocols:
 - LogUp
 
-## Background on Security Regimes
+## Background
+
+### Background on Security Regimes
 
 Consider a fixed set of parameters describing the prover and verifier of a FRI-based zkEVM.
 To evaluate the *concrete soundness level* of such a system, we introduce a parameter `θ` in the range `(0, 1)`.
@@ -60,7 +51,7 @@ Depending on the value of `θ`, the analysis falls into different regimes:
 Crucially, `θ` is not an input to the prover or verifier code—it is only used in the *soundness analysis*.
 All regimes therefore apply to the *same zkEVM instance* without any change.
 
-## Background on Proof Size Estimates
+### Background on Proof Size Estimates
 
 The soundcalc proof size estimate is based on counting Merkle proofs and their sizes. It is only an estimate and should be treated as such. To get the actual proof size you need to run the actual prover.
 
@@ -71,7 +62,17 @@ Reports show two estimates:
 
 In practice, actual proof sizes tend to be closer to the expected estimate.
 
-## Incorporation of recent work
+### Non-Interactive vs. Interactive Security
+At the moment, soundcalc estimates the security level of the *interactive oracle proof (IOP)* underlying hash-based zkEVM proof systems, for the notion of *[round-by-round soundness](https://eprint.iacr.org/2019/1261.pdf)*.
+That is, security levels are shown for each round, and the total security level is the minimum of all these levels. 
+
+For an explanation why the minimum of these levels also corresponds (roughly) to the security level of the non-interactive construction obtained via the [BCS transform](https://eprint.iacr.org/2016/116.pdf), we refer to the section on round-by-round soundness [here](https://eprint.iacr.org/2025/1993.pdf).
+
+Note that this correspondence holds for classical adversaries, but is different for quantum adversaries in the quantum random oracle model, and we refer to [this work](https://eprint.iacr.org/2025/2166.pdf) for details.
+
+We may integrate the compilation to the non-interactive setting (classically and/or quantumly) in the future.
+
+### Incorporation of recent work
 
 A flurry of new results on proximity gaps were published in November 2025 (see [Nico's summary](https://blog.zksecurity.xyz/posts/proximity-conjecture/)).
 
