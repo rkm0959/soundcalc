@@ -7,9 +7,9 @@ from soundcalc.common.fields import FieldParams
 
 class GKR:
     @staticmethod
-    def soundness_error(field: FieldParams, alphabet_size: int, num_lookups_M: int) -> float:
+    def epsilon_gkr(field: FieldParams, alphabet_size: int, num_lookups_M: int) -> float:
         """
-        Computes epsilon' for the GKR protocol as:
+        Computes epsilon_GKR for the GKR protocol as:
             (1/2) * (n + m) * (3 * (n + m) + 1) / |F|
         where:
             |F| is the field size,
@@ -25,3 +25,8 @@ class GKR:
         m = math.log2(num_lookups_M)
         nm = n + m
         return 0.5 * nm * (3 * nm + 1) / field.F
+
+    @staticmethod
+    def soundness_error(field: FieldParams, alphabet_size: int, num_lookups_M: int) -> float:
+        """Backward-compatible alias for epsilon_gkr."""
+        return GKR.epsilon_gkr(field, alphabet_size, num_lookups_M)

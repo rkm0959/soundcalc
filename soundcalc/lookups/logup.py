@@ -62,12 +62,9 @@ class LogUp:
         """
         alphabet_size = self.config.alphabet_size_H or max(L * S, T * S)
 
-        epsilon_sum = (M * 2 * alphabet_size) / F
-
-        # Add reduction error (from multivariate-to-univariate or logup-sound)
-        # Add epsilon' from GKR soundness (before grinding)
-        epsilon_gkr = GKR.soundness_error(self.config.field, alphabet_size, M)
-        return epsilon_sum + self.config.reduction_error + epsilon_gkr
+        multivariate_error = (M * 2 * alphabet_size) / F + self.config.reduction_error
+        epsilon_gkr = GKR.epsilon_gkr(self.config.field, alphabet_size, M)
+        return multivariate_error + epsilon_gkr
 
     def _calculate_soundness_error(self) -> float:
         """
