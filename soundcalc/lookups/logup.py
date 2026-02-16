@@ -5,7 +5,7 @@ import math
 
 from soundcalc.common.fields import FieldParams
 from soundcalc.common.utils import get_bits_of_security_from_error
-from soundcalc.lookups.gkr import GKR
+import soundcalc.lookups.gkr as gkr
 
 class LogUpType(Enum):
     UNIVARIATE = "univariate"
@@ -63,7 +63,7 @@ class LogUp:
         alphabet_size = self.config.alphabet_size_H or max(L * S, T * S)
 
         multivariate_error = (M * 2 * alphabet_size) / F + self.config.reduction_error
-        epsilon_gkr = GKR.epsilon_gkr(self.config.field, alphabet_size, M)
+        epsilon_gkr = gkr.get_gkr_soundness_error(self.config.field, alphabet_size, M)
         return multivariate_error + epsilon_gkr
 
     def _calculate_soundness_error(self) -> float:

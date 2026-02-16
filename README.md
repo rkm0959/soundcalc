@@ -15,7 +15,7 @@ As a result, the calculator generates / updates reports in [`reports/`](reports/
 
 ## Non-Interactive vs. Interactive Security
 At the moment, soundcalc estimates the security level of the *interactive oracle proof (IOP)* underlying hash-based zkEVM proof systems, for the notion of *[round-by-round soundness](https://eprint.iacr.org/2019/1261.pdf)*.
-That is, security levels are shown for each round, and the total security level is the minimum of all these levels. 
+That is, security levels are shown for each round, and the total security level is the minimum of all these levels.
 
 For an explanation why the minimum of these levels also corresponds (roughly) to the security level of the non-interactive construction obtained via the [BCS transform](https://eprint.iacr.org/2016/116.pdf), we refer to the section on round-by-round soundness [here](https://eprint.iacr.org/2025/1993.pdf).
 
@@ -45,6 +45,7 @@ We support the following security regimes (see below for explanation of regimes)
 
 We support the following lookup protocols:
 - LogUp
+- LogUp-GKR
 
 ## Background on Security Regimes
 
