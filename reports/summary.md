@@ -8,8 +8,8 @@ How to read this report:
 
 | zkVM | Security | Proof Size | PCS | Field | Circuits | Weakest Circuit |
 |------|----------|------------|-----|-------|----------|-----------------|
-| [Airbender](airbender.md) | **64** bits (UDR) | 1951 KiB | FRI | M31⁴ | 1 | generalized_circuit |
-| [OpenVM](openvm.md) | **83** bits (UDR) | 8231 KiB | FRI | BabyBear⁴ | 3 | app |
+| [Airbender](airbender.md) | **67** bits (JBR) | 1951 KiB | FRI | M31⁴ | 1 | generalized_circuit |
+| [OpenVM](openvm.md) | **100** bits (UDR) | 8231 KiB | FRI | BabyBear⁴ | 3 | app |
 | [Pico](pico.md) | **53** bits (JBR) | 281 KiB | FRI | KoalaBear⁴ | 5 | riscv |
 | [SP1](sp1.md) | **97** bits (UDR) | 1001 KiB | Unknown | KoalaBear⁴ | 4 | core |
 | [ZisK](zisk.md) | **128** bits (JBR) | 313 KiB | FRI | Goldilocks³ | 44 | Dma |

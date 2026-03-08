@@ -200,6 +200,9 @@ class FRI(PCS):
             epsilon = regime.get_error_multilinear(rate, dimension, self.batch_size)
         else:
             epsilon = regime.get_error_linear(rate, dimension)
+            
+        # add grinding for batching within the commit phase
+        epsilon = apply_grinding(epsilon, self.grinding_commit_phase)
 
         return epsilon
 
@@ -216,9 +219,6 @@ class FRI(PCS):
         dimension = self.trace_length / acc_folding_factor
 
         epsilon = regime.get_error_powers(rate, dimension, self.FRI_folding_factors[round])
-
-        # add grinding for commit phase
-        epsilon = apply_grinding(epsilon, self.grinding_commit_phase)
 
         return epsilon
 
