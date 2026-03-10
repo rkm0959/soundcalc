@@ -11,7 +11,7 @@ How to read this report:
 | [Airbender](airbender.md) | **67** bits (JBR) | 1951 KiB | FRI | M31⁴ | 1 | generalized_circuit |
 | [OpenVM](openvm.md) | **100** bits (UDR) | 8231 KiB | FRI | BabyBear⁴ | 3 | app |
 | [Pico](pico.md) | **53** bits (JBR) | 281 KiB | FRI | KoalaBear⁴ | 5 | riscv |
-| [SP1](sp1.md) | **97** bits (UDR) | 1001 KiB | Unknown | KoalaBear⁴ | 4 | core |
+| [SP1](sp1.md) | **98** bits (UDR) | 1001 KiB | Unknown | KoalaBear⁴ | 4 | wrap |
 | [ZisK](zisk.md) | **128** bits (JBR) | 313 KiB | FRI | Goldilocks³ | 44 | Dma |
 
 ## Notes

@@ -89,7 +89,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[8001] | Permutation_gsum_[10] | Permutation_gsum_[8000] | Range Check_gsum_[104] | Range Check_gsum_[103] | Lookup_gsum_[77] | Lookup_gsum_[5000] | Range Check_gsum_[102] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 168 | 168 | 167 | 170 | 170 | 169 | 166 | 170 | 186 | 168 | 164 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 168 | 168 | 167 | 170 | 170 | 169 | 166 | 170 | 186 | 168 | 166 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 168 | 168 | 167 | 170 | 170 | 169 | 166 | 170 | 179 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 149 | 128 |
 
 
@@ -121,7 +121,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[77] | Range Check_gsum_[104] | Range Check_gsum_[102] | Lookup_gsum_[8001] | Permutation_gsum_[10] | Lookup_gsum_[5000] | Permutation_gsum_[8000] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 169 | 170 | 170 | 168 | 168 | 166 | 167 | 187 | 168 | 164 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 169 | 170 | 170 | 168 | 168 | 166 | 167 | 187 | 168 | 166 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 169 | 170 | 170 | 168 | 168 | 166 | 167 | 180 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 148 | 128 |
 
 
@@ -153,7 +153,7 @@ How to read this report:
 
 | regime | total | Range Check_gsum_[104] | Range Check_gsum_[105] | Range Check_gsum_[102] | Permutation_gsum_[8000] | Lookup_gsum_[5000] | Lookup_gsum_[8001] | Permutation_gsum_[10] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 170 | 170 | 170 | 167 | 166 | 168 | 168 | 187 | 168 | 165 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 170 | 170 | 170 | 167 | 166 | 168 | 168 | 187 | 168 | 167 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 170 | 170 | 170 | 167 | 166 | 168 | 168 | 180 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 148 | 128 |
 
 
@@ -185,7 +185,7 @@ How to read this report:
 
 | regime | total | Permutation_gsum_[10] | Range Check_gsum_[103] | Lookup_gsum_[5000] | Lookup_gsum_[88] | Direct_gsum_[5000] | Direct_gsum_[8200] | Range Check_gsum_[102] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 168 | 170 | 167 | 169 | 167 | 166 | 170 | 185 | 168 | 164 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 168 | 170 | 167 | 169 | 167 | 166 | 170 | 185 | 168 | 166 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 168 | 170 | 167 | 169 | 167 | 166 | 170 | 178 | 162 | 128 | 134 | 137 | 140 | 143 | 146 | 149 | 128 |
 
 
@@ -217,7 +217,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[5000] | Lookup_gsum_[88] | Permutation_gsum_[10] | Range Check_gsum_[103] | Direct_gsum_[5000] | Direct_gsum_[8200] | Range Check_gsum_[102] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 167 | 169 | 168 | 170 | 167 | 166 | 170 | 186 | 168 | 164 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 167 | 169 | 168 | 170 | 167 | 166 | 170 | 186 | 168 | 166 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 167 | 169 | 168 | 170 | 167 | 166 | 170 | 179 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 149 | 128 |
 
 
@@ -247,7 +247,7 @@ How to read this report:
 
 | regime | total | Direct_gsum_[8200] | Lookup_gsum_[5000] | Direct_gsum_[5000] | Permutation_gsum_[10] | Range Check_gsum_[103] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 166 | 167 | 167 | 168 | 170 | 186 | 168 | 165 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 166 | 167 | 167 | 168 | 170 | 186 | 168 | 167 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 166 | 167 | 167 | 168 | 170 | 178 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 148 | 128 |
 
 
@@ -277,7 +277,7 @@ How to read this report:
 
 | regime | total | Direct_gsum_[5000] | Permutation_gsum_[10] | Direct_gsum_[8200] | Range Check_gsum_[103] | Lookup_gsum_[5000] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 167 | 168 | 166 | 170 | 167 | 185 | 168 | 164 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 167 | 168 | 166 | 170 | 167 | 185 | 168 | 166 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 167 | 168 | 166 | 170 | 167 | 178 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 149 | 128 |
 
 
@@ -307,7 +307,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[5000] | Permutation_gsum_[10] | Range Check_gsum_[103] | Direct_gsum_[8200] | Direct_gsum_[5000] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 167 | 168 | 170 | 166 | 167 | 185 | 168 | 164 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 167 | 168 | 170 | 166 | 167 | 185 | 168 | 166 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 167 | 168 | 170 | 166 | 167 | 178 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 149 | 128 |
 
 
@@ -338,7 +338,7 @@ How to read this report:
 
 | regime | total | Permutation_gsum_[10] | Lookup_gsum_[88] | Lookup_gsum_[5000] | Direct_gsum_[8201] | Direct_gsum_[5000] | Range Check_gsum_[103] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 167 | 169 | 167 | 165 | 167 | 170 | 185 | 168 | 164 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 167 | 169 | 167 | 165 | 167 | 170 | 185 | 168 | 166 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 167 | 169 | 167 | 165 | 167 | 170 | 178 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 149 | 128 |
 
 
@@ -368,7 +368,7 @@ How to read this report:
 
 | regime | total | Permutation_gsum_[10] | Permutation_gsum_[8000] | Lookup_gsum_[8002] | Lookup_gsum_[88] | Lookup_gsum_[8003] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 168 | 167 | 168 | 169 | 169 | 185 | 168 | 163 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 168 | 167 | 168 | 169 | 169 | 185 | 168 | 165 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 168 | 167 | 168 | 169 | 169 | 179 | 162 | 128 | 134 | 137 | 140 | 143 | 146 | 150 | 128 |
 
 
@@ -397,7 +397,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[88] | Lookup_gsum_[8002] | Permutation_gsum_[8000] | Permutation_gsum_[10] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 169 | 168 | 167 | 168 | 186 | 168 | 163 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 169 | 168 | 167 | 168 | 186 | 168 | 165 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 169 | 168 | 167 | 168 | 179 | 162 | 128 | 134 | 137 | 140 | 143 | 146 | 149 | 128 |
 
 
@@ -426,7 +426,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[8002] | Lookup_gsum_[88] | Permutation_gsum_[8000] | Permutation_gsum_[10] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 168 | 169 | 167 | 168 | 187 | 168 | 164 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 168 | 169 | 167 | 168 | 187 | 168 | 166 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 168 | 169 | 167 | 168 | 180 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 149 | 128 |
 
 
@@ -457,7 +457,7 @@ How to read this report:
 
 | regime | total | Range Check_gsum_[102] | Range Check_gsum_[106] | Lookup_gsum_[5000] | Permutation_gsum_[10] | Direct_gsum_[1000] | Lookup_gsum_[7890] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 169 | 169 | 166 | 166 | 166 | 166 | 184 | 167 | 163 | 169 | 172 | 175 | 178 | 181 | 184 | 111 |
+| UDR | 111 | 169 | 169 | 166 | 166 | 166 | 166 | 184 | 167 | 165 | 171 | 174 | 177 | 180 | 183 | 186 | 111 |
 | JBR | 128 | 169 | 169 | 166 | 166 | 166 | 166 | 178 | 161 | 128 | 134 | 137 | 140 | 143 | 146 | 149 | 128 |
 
 
@@ -483,7 +483,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[7890] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 166 | 190 | 168 | 164 | 169 | 172 | 175 | 178 | 181 | 184 | 111 |
+| UDR | 111 | 166 | 190 | 168 | 166 | 171 | 174 | 177 | 180 | 183 | 186 | 111 |
 | JBR | 128 | 166 | 183 | 161 | 128 | 132 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -513,7 +513,7 @@ How to read this report:
 
 | regime | total | Direct_gsum_[11] | Range Check_gsum_[103] | Permutation_gsum_[10] | Range Check_gsum_[104] | Range Check_gsum_[102] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 166 | 169 | 167 | 169 | 169 | 186 | 167 | 164 | 169 | 172 | 175 | 178 | 181 | 184 | 111 |
+| UDR | 111 | 166 | 169 | 167 | 169 | 169 | 186 | 167 | 166 | 171 | 174 | 177 | 180 | 183 | 186 | 111 |
 | JBR | 128 | 166 | 169 | 167 | 169 | 169 | 179 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 148 | 128 |
 
 
@@ -541,7 +541,7 @@ How to read this report:
 
 | regime | total | Range Check_gsum_[102] | Direct_gsum_[11] | Permutation_gsum_[10] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 170 | 167 | 168 | 187 | 168 | 165 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 170 | 167 | 168 | 187 | 168 | 167 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 170 | 167 | 168 | 180 | 161 | 128 | 132 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -570,7 +570,7 @@ How to read this report:
 
 | regime | total | Direct_gsum_[11] | Permutation_gsum_[10] | Range Check_gsum_[102] | Range Check_gsum_[103] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 167 | 168 | 170 | 170 | 187 | 168 | 165 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 167 | 168 | 170 | 170 | 187 | 168 | 167 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 167 | 168 | 170 | 170 | 180 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 148 | 128 |
 
 
@@ -598,7 +598,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[133] | Permutation_gsum_[10] | Range Check_gsum_[107] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 168 | 168 | 170 | 186 | 168 | 164 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 168 | 168 | 170 | 186 | 168 | 166 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 168 | 168 | 170 | 179 | 162 | 128 | 134 | 137 | 140 | 143 | 146 | 149 | 128 |
 
 
@@ -628,7 +628,7 @@ How to read this report:
 
 | regime | total | Range Check_gsum_[103] | Direct_gsum_[10] | Lookup_gsum_[88] | Permutation_gsum_[10] | Range Check_gsum_[107] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 169 | 166 | 168 | 166 | 169 | 187 | 167 | 164 | 169 | 172 | 175 | 178 | 181 | 184 | 111 |
+| UDR | 111 | 169 | 166 | 168 | 166 | 169 | 187 | 167 | 166 | 171 | 174 | 177 | 180 | 183 | 186 | 111 |
 | JBR | 128 | 169 | 166 | 168 | 166 | 169 | 180 | 160 | 128 | 132 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -657,7 +657,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[88] | Direct_gsum_[10] | Permutation_gsum_[10] | Range Check_gsum_[103] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 168 | 166 | 166 | 169 | 188 | 167 | 164 | 169 | 172 | 175 | 178 | 181 | 184 | 111 |
+| UDR | 111 | 168 | 166 | 166 | 169 | 188 | 167 | 166 | 171 | 174 | 177 | 180 | 183 | 186 | 111 |
 | JBR | 128 | 168 | 166 | 166 | 169 | 181 | 160 | 128 | 132 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -687,7 +687,7 @@ How to read this report:
 
 | regime | total | Range Check_gsum_[107] | Lookup_gsum_[88] | Direct_gsum_[10] | Range Check_gsum_[103] | Permutation_gsum_[10] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 169 | 168 | 166 | 169 | 166 | 188 | 167 | 164 | 169 | 172 | 175 | 178 | 181 | 184 | 111 |
+| UDR | 111 | 169 | 168 | 166 | 169 | 166 | 188 | 167 | 166 | 171 | 174 | 177 | 180 | 183 | 186 | 111 |
 | JBR | 128 | 169 | 168 | 166 | 169 | 166 | 181 | 160 | 128 | 132 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -715,7 +715,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[5000] | Lookup_gsum_[330] | Lookup_gsum_[331] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 166 | 169 | 168 | 185 | 168 | 164 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 166 | 169 | 168 | 185 | 168 | 166 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 166 | 169 | 168 | 179 | 162 | 128 | 134 | 137 | 140 | 143 | 146 | 149 | 128 |
 
 
@@ -743,7 +743,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[5000] | Direct_gsum_[5000] | Lookup_gsum_[125] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 166 | 166 | 167 | 188 | 167 | 163 | 169 | 172 | 175 | 178 | 181 | 184 | 111 |
+| UDR | 111 | 166 | 166 | 167 | 188 | 167 | 165 | 171 | 174 | 177 | 180 | 183 | 186 | 111 |
 | JBR | 128 | 166 | 166 | 167 | 181 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 148 | 128 |
 
 
@@ -771,7 +771,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[5000] | Range Check_gsum_[103] | Direct_gsum_[5000] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 166 | 169 | 166 | 188 | 167 | 164 | 169 | 172 | 175 | 178 | 181 | 184 | 111 |
+| UDR | 111 | 166 | 169 | 166 | 188 | 167 | 166 | 171 | 174 | 177 | 180 | 183 | 186 | 111 |
 | JBR | 128 | 166 | 169 | 166 | 181 | 160 | 128 | 132 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -800,7 +800,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[124] | Direct_gsum_[5000] | Range Check_gsum_[102] | Lookup_gsum_[5000] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 167 | 166 | 169 | 166 | 188 | 167 | 163 | 169 | 172 | 175 | 178 | 181 | 184 | 111 |
+| UDR | 111 | 167 | 166 | 169 | 166 | 188 | 167 | 165 | 171 | 174 | 177 | 180 | 183 | 186 | 111 |
 | JBR | 128 | 167 | 166 | 169 | 166 | 182 | 161 | 128 | 133 | 136 | 139 | 142 | 145 | 148 | 128 |
 
 
@@ -828,7 +828,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[5000] | Range Check_gsum_[103] | Permutation_gsum_[10] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 168 | 171 | 169 | 186 | 169 | 164 | 171 | 174 | 177 | 180 | 183 | 111 |
+| UDR | 111 | 168 | 171 | 169 | 186 | 169 | 166 | 173 | 176 | 179 | 182 | 185 | 111 |
 | JBR | 128 | 168 | 171 | 169 | 179 | 162 | 128 | 134 | 137 | 140 | 143 | 146 | 128 |
 
 
@@ -859,7 +859,7 @@ How to read this report:
 
 | regime | total | Range Check_gsum_[103, 104] | Lookup_gsum_[5002] | Range Check_gsum_[103] | Range Check_gsum_[108] | Permutation_gsum_[10] | Lookup_gsum_[5000] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 171 | 170 | 171 | 171 | 169 | 168 | 185 | 169 | 162 | 171 | 174 | 177 | 180 | 183 | 111 |
+| UDR | 111 | 171 | 170 | 171 | 171 | 169 | 168 | 185 | 169 | 164 | 173 | 176 | 179 | 182 | 185 | 111 |
 | JBR | 128 | 171 | 170 | 171 | 171 | 169 | 168 | 178 | 163 | 128 | 137 | 140 | 143 | 146 | 149 | 128 |
 
 
@@ -890,7 +890,7 @@ How to read this report:
 
 | regime | total | Range Check_gsum_[103, 104] | Permutation_gsum_[10] | Range Check_gsum_[108] | Lookup_gsum_[5000] | Range Check_gsum_[103] | Lookup_gsum_[5002] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 112 | 171 | 169 | 171 | 168 | 171 | 170 | 185 | 169 | 161 | 171 | 174 | 177 | 180 | 183 | 112 |
+| UDR | 112 | 171 | 169 | 171 | 168 | 171 | 170 | 185 | 169 | 163 | 173 | 176 | 179 | 182 | 185 | 112 |
 | JBR | 128 | 171 | 169 | 171 | 168 | 171 | 170 | 179 | 163 | 128 | 137 | 140 | 143 | 146 | 149 | 128 |
 
 
@@ -918,7 +918,7 @@ How to read this report:
 
 | regime | total | Permutation_gsum_[10] | Lookup_gsum_[5000] | Lookup_gsum_[126] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 113 | 172 | 171 | 172 | 180 | 172 | 162 | 174 | 177 | 180 | 183 | 113 |
+| UDR | 113 | 172 | 171 | 172 | 180 | 172 | 164 | 176 | 179 | 182 | 185 | 113 |
 | JBR | 128 | 172 | 171 | 172 | 174 | 166 | 128 | 140 | 143 | 146 | 149 | 128 |
 
 
@@ -946,7 +946,7 @@ How to read this report:
 
 | regime | total | Range Check_gsum_[109] | Lookup_gsum_[5000] | Permutation_gsum_[10] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 173 | 170 | 171 | 185 | 171 | 162 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 173 | 170 | 171 | 185 | 171 | 164 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 173 | 170 | 171 | 178 | 165 | 128 | 138 | 141 | 144 | 147 | 150 | 128 |
 
 
@@ -973,7 +973,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[5000] | Permutation_gsum_[10] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 93 | 171 | 172 | 185 | 172 | 165 | 173 | 176 | 179 | 182 | 185 | 93 |
+| UDR | 93 | 171 | 172 | 185 | 172 | 166 | 174 | 177 | 180 | 183 | 186 | 93 |
 | JBR | 128 | 171 | 172 | 177 | 164 | 128 | 135 | 138 | 141 | 144 | 148 | 128 |
 
 
@@ -1002,7 +1002,7 @@ How to read this report:
 
 | regime | total | Permutation_gsum_[10] | Lookup_gsum_[5000] | Permutation_gsum_[127] | Range Check_gsum_[103] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 171 | 170 | 171 | 173 | 184 | 171 | 163 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 171 | 170 | 171 | 173 | 184 | 171 | 165 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 171 | 170 | 171 | 173 | 177 | 165 | 128 | 137 | 140 | 143 | 146 | 150 | 128 |
 
 
@@ -1033,7 +1033,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[108] | Lookup_gsum_[102] | Lookup_gsum_[108, 109] | Lookup_gsum_[104] | Lookup_gsum_[103, 104] | Lookup_gsum_[104, 105, 106, 107, 108] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 171 | 171 | 171 | 171 | 171 | 171 | 187 | 169 | 164 | 171 | 174 | 177 | 180 | 183 | 111 |
+| UDR | 111 | 171 | 171 | 171 | 171 | 171 | 171 | 187 | 169 | 166 | 173 | 176 | 179 | 182 | 185 | 111 |
 | JBR | 128 | 171 | 171 | 171 | 171 | 171 | 171 | 180 | 162 | 128 | 134 | 137 | 140 | 143 | 146 | 128 |
 
 
@@ -1064,7 +1064,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[125] | Lookup_gsum_[330] | Lookup_gsum_[126, 331, 8002, 133, 125] | Lookup_gsum_[5002, 88, 77, 8003, 126] | Lookup_gsum_[124, 8001] | Lookup_gsum_[125, 124] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 168 | 169 | 168 | 168 | 168 | 168 | 189 | 168 | 163 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 168 | 169 | 168 | 168 | 168 | 168 | 189 | 168 | 165 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 168 | 169 | 168 | 168 | 168 | 168 | 182 | 162 | 128 | 134 | 137 | 140 | 143 | 146 | 149 | 128 |
 
 
@@ -1090,7 +1090,7 @@ How to read this report:
 
 | regime | total | Lookup_gsum_[5000] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 111 | 167 | 189 | 168 | 163 | 170 | 173 | 176 | 179 | 182 | 185 | 111 |
+| UDR | 111 | 167 | 189 | 168 | 165 | 172 | 175 | 178 | 181 | 184 | 187 | 111 |
 | JBR | 128 | 167 | 182 | 162 | 128 | 134 | 137 | 140 | 143 | 146 | 150 | 128 |
 
 
@@ -1116,7 +1116,7 @@ How to read this report:
 
 | regime | total | Connection_gprod_[1] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 94 | 171 | 184 | 171 | 164 | 172 | 175 | 178 | 181 | 184 | 94 |
+| UDR | 94 | 171 | 184 | 171 | 165 | 173 | 176 | 179 | 182 | 185 | 94 |
 | JBR | 128 | 171 | 176 | 163 | 128 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -1142,7 +1142,7 @@ How to read this report:
 
 | regime | total | Connection_gprod_[1] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 94 | 171 | 184 | 171 | 164 | 172 | 175 | 178 | 181 | 184 | 94 |
+| UDR | 94 | 171 | 184 | 171 | 165 | 173 | 176 | 179 | 182 | 185 | 94 |
 | JBR | 128 | 171 | 176 | 163 | 128 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -1168,7 +1168,7 @@ How to read this report:
 
 | regime | total | Connection_gprod_[1] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 94 | 171 | 184 | 171 | 164 | 172 | 175 | 178 | 181 | 184 | 94 |
+| UDR | 94 | 171 | 184 | 171 | 165 | 173 | 176 | 179 | 182 | 185 | 94 |
 | JBR | 128 | 171 | 176 | 163 | 128 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -1194,7 +1194,7 @@ How to read this report:
 
 | regime | total | Connection_gprod_[1] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | commit round 6 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 94 | 169 | 184 | 169 | 162 | 170 | 173 | 176 | 179 | 182 | 185 | 94 |
+| UDR | 94 | 169 | 184 | 169 | 163 | 171 | 174 | 177 | 180 | 183 | 186 | 94 |
 | JBR | 128 | 169 | 177 | 162 | 128 | 136 | 139 | 142 | 145 | 148 | 151 | 128 |
 
 
@@ -1220,7 +1220,7 @@ How to read this report:
 
 | regime | total | Connection_gprod_[1] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 94 | 170 | 184 | 170 | 163 | 171 | 174 | 177 | 180 | 183 | 94 |
+| UDR | 94 | 170 | 184 | 170 | 164 | 172 | 175 | 178 | 181 | 184 | 94 |
 | JBR | 128 | 170 | 176 | 162 | 128 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -1246,7 +1246,7 @@ How to read this report:
 
 | regime | total | Connection_gprod_[1] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 94 | 171 | 184 | 171 | 164 | 172 | 175 | 178 | 181 | 184 | 94 |
+| UDR | 94 | 171 | 184 | 171 | 165 | 173 | 176 | 179 | 182 | 185 | 94 |
 | JBR | 128 | 171 | 176 | 163 | 128 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -1272,7 +1272,7 @@ How to read this report:
 
 | regime | total | Connection_gprod_[1] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | commit round 5 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 80 | 172 | 184 | 171 | 164 | 172 | 175 | 178 | 181 | 184 | 80 |
+| UDR | 80 | 172 | 184 | 171 | 166 | 173 | 176 | 179 | 182 | 185 | 80 |
 | JBR | 128 | 172 | 176 | 163 | 128 | 135 | 138 | 141 | 144 | 147 | 128 |
 
 
@@ -1298,7 +1298,7 @@ How to read this report:
 
 | regime | total | Connection_gprod_[1] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | commit round 4 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 63 | 173 | 184 | 172 | 163 | 171 | 175 | 179 | 183 | 63 |
+| UDR | 63 | 173 | 184 | 172 | 164 | 172 | 176 | 180 | 184 | 63 |
 | JBR | 128 | 173 | 175 | 163 | 128 | 136 | 140 | 144 | 148 | 128 |
 
 
@@ -1324,6 +1324,6 @@ How to read this report:
 
 | regime | total | Connection_gprod_[1] | ALI | DEEP | batching | commit round 1 | commit round 2 | commit round 3 | query phase |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| UDR | 71 | 174 | 184 | 173 | 165 | 173 | 176 | 179 | 71 |
+| UDR | 71 | 174 | 184 | 173 | 166 | 174 | 177 | 180 | 71 |
 | JBR | 128 | 174 | 175 | 164 | 129 | 136 | 139 | 142 | 128 |
 
