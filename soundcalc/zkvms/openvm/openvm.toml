@@ -36,7 +36,7 @@ power_batching = true
 num_queries = 193
 fri_folding_factors = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 fri_early_stop_degree = 2 # =blowup_factor
-grinding_commit_phase = 20
+grinding_batching_phase = 20
 grinding_query_phase = 20
 grinding_deep = 5
 
@@ -54,7 +54,7 @@ power_batching = true
 num_queries = 193
 fri_folding_factors = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 fri_early_stop_degree = 2 # = blowup_factor
-grinding_commit_phase = 20
+grinding_batching_phase = 20
 grinding_query_phase = 20
 grinding_deep = 5
 
@@ -72,7 +72,7 @@ power_batching = true
 num_queries = 118
 fri_folding_factors = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 fri_early_stop_degree = 4 # = blowup_factor
-grinding_commit_phase = 16
+grinding_batching_phase = 16
 grinding_query_phase = 20
 grinding_deep = 5
 

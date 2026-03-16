@@ -26,7 +26,7 @@ How to read this report:
 - Hash size (bits): 256
 - Number of queries: 193
 - Grinding query phase (bits): 20
-- Grinding commit phase (bits): 20
+- Grinding batching phase (bits): 20
 - Grinding DEEP (bits): 5
 - Field: BabyBear⁴
 - Rate (ρ): 0.5
@@ -53,7 +53,7 @@ How to read this report:
 - Hash size (bits): 256
 - Number of queries: 193
 - Grinding query phase (bits): 20
-- Grinding commit phase (bits): 20
+- Grinding batching phase (bits): 20
 - Grinding DEEP (bits): 5
 - Field: BabyBear⁴
 - Rate (ρ): 0.5
@@ -80,7 +80,7 @@ How to read this report:
 - Hash size (bits): 256
 - Number of queries: 118
 - Grinding query phase (bits): 20
-- Grinding commit phase (bits): 16
+- Grinding batching phase (bits): 16
 - Grinding DEEP (bits): 5
 - Field: BabyBear⁴
 - Rate (ρ): 0.25
