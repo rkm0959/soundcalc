@@ -1,7 +1,7 @@
 [zkevm]
 name = "ZisK"
 protocol_family = "FRI_STARK"
-version = "0.16.0"
+version = "0.16.1"
 field = "Goldilocks^3"
 hash_size_bits = 256
 
@@ -31,7 +31,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -40,7 +40,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -49,7 +49,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 7
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -58,7 +58,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -67,7 +67,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -76,7 +76,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -85,7 +85,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -94,7 +94,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -123,7 +123,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -132,7 +132,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -141,7 +141,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 7
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -150,7 +150,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -159,7 +159,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -168,7 +168,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -177,7 +177,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -206,7 +206,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -215,7 +215,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 7
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -224,7 +224,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -233,7 +233,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -242,7 +242,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -251,7 +251,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -260,7 +260,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -289,7 +289,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -298,7 +298,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 10
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -307,7 +307,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -316,7 +316,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 4
+num_lookups_M = 4
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -325,7 +325,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 9
+num_lookups_M = 9
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -334,7 +334,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 8
+num_lookups_M = 8
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -343,7 +343,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -372,7 +372,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -381,7 +381,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 10
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -390,7 +390,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -399,7 +399,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 4
+num_lookups_M = 4
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -408,7 +408,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 4
+num_lookups_M = 4
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -417,7 +417,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 8
+num_lookups_M = 8
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -426,7 +426,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -455,7 +455,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -464,7 +464,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 10
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -473,7 +473,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -482,7 +482,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 8
+num_lookups_M = 8
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -491,7 +491,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -520,7 +520,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -529,7 +529,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 10
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -538,7 +538,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -547,7 +547,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 9
+num_lookups_M = 9
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -556,7 +556,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -585,7 +585,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -594,7 +594,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 10
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -603,7 +603,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -612,7 +612,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 17
+num_lookups_M = 17
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -621,7 +621,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -650,7 +650,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -659,7 +659,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 18
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -668,7 +668,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -677,7 +677,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 4
+num_lookups_M = 4
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -686,7 +686,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 6
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -695,7 +695,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -724,7 +724,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -733,7 +733,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 3
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -742,7 +742,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 12
+num_lookups_M = 12
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -751,7 +751,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 4
+num_lookups_M = 4
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -760,7 +760,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -789,7 +789,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -798,7 +798,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 12
+num_lookups_M = 12
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -807,7 +807,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 4
+num_lookups_M = 4
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -816,7 +816,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -845,7 +845,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -854,7 +854,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 8
+num_lookups_M = 8
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -863,7 +863,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -872,7 +872,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -901,7 +901,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 4194304
 num_columns_S = 5
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -910,7 +910,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -919,7 +919,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -928,7 +928,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 4194304
 num_columns_S = 6
-num_columns_M = 34
+num_lookups_M = 34
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -937,7 +937,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 34
+num_lookups_M = 34
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -946,7 +946,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -975,7 +975,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 4194304
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1004,7 +1004,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 4194304
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1013,7 +1013,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 4194304
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1022,7 +1022,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1031,7 +1031,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 5
+num_lookups_M = 5
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1040,7 +1040,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1069,7 +1069,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1078,7 +1078,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1087,7 +1087,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 3
+num_lookups_M = 3
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1116,7 +1116,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1125,7 +1125,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1134,7 +1134,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1143,7 +1143,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 8
+num_lookups_M = 8
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1172,7 +1172,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1181,7 +1181,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1190,7 +1190,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 8
+num_lookups_M = 8
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1219,7 +1219,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 4194304
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1228,7 +1228,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1237,7 +1237,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 4194304
 num_columns_S = 6
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1246,7 +1246,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1255,7 +1255,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1284,7 +1284,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 4194304
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1293,7 +1293,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1302,7 +1302,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 4194304
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1311,7 +1311,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1340,7 +1340,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 4194304
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1349,7 +1349,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1358,7 +1358,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 4194304
 num_columns_S = 6
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1367,7 +1367,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1376,7 +1376,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1405,7 +1405,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 23
+num_lookups_M = 23
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1414,7 +1414,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 0
 num_columns_S = 4
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1423,7 +1423,7 @@ logup_type = "univariate"
 rows_L = 2097152
 rows_T = 2097152
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1452,7 +1452,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1461,7 +1461,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 7
-num_columns_M = 8
+num_lookups_M = 8
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1470,7 +1470,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 4194304
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1499,7 +1499,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1508,7 +1508,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 4194304
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1517,7 +1517,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 4
+num_lookups_M = 4
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1546,7 +1546,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1555,7 +1555,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 7
-num_columns_M = 8
+num_lookups_M = 8
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1564,7 +1564,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 4194304
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1573,7 +1573,7 @@ logup_type = "univariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1602,7 +1602,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 1048576
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1611,7 +1611,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 16
+num_lookups_M = 16
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1620,7 +1620,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 16
+num_lookups_M = 16
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1649,7 +1649,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 1048576
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1658,7 +1658,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1667,7 +1667,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1676,7 +1676,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 3
+num_lookups_M = 3
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1685,7 +1685,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 7
+num_lookups_M = 7
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1694,7 +1694,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 6
+num_lookups_M = 6
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1723,7 +1723,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 1048576
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1732,7 +1732,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 2
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1741,7 +1741,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1750,7 +1750,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 3
+num_lookups_M = 3
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1759,7 +1759,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 7
+num_lookups_M = 7
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1768,7 +1768,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 6
+num_lookups_M = 6
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1797,7 +1797,7 @@ logup_type = "univariate"
 rows_L = 131072
 rows_T = 0
 num_columns_S = 4
-num_columns_M = 534
+num_lookups_M = 534
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1806,7 +1806,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 131072
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1815,7 +1815,7 @@ logup_type = "univariate"
 rows_L = 131072
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 25
+num_lookups_M = 25
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1844,7 +1844,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 262144
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1853,7 +1853,7 @@ logup_type = "univariate"
 rows_L = 262144
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1862,7 +1862,7 @@ logup_type = "univariate"
 rows_L = 262144
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 2
+num_lookups_M = 2
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1891,7 +1891,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 131072
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1900,7 +1900,7 @@ logup_type = "univariate"
 rows_L = 131072
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 4
+num_lookups_M = 4
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1929,7 +1929,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 262144
 num_columns_S = 11
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1938,7 +1938,7 @@ logup_type = "univariate"
 rows_L = 262144
 rows_T = 0
 num_columns_S = 6
-num_columns_M = 4
+num_lookups_M = 4
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1947,7 +1947,7 @@ logup_type = "univariate"
 rows_L = 262144
 rows_T = 262144
 num_columns_S = 3
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1956,7 +1956,7 @@ logup_type = "univariate"
 rows_L = 262144
 rows_T = 0
 num_columns_S = 1
-num_columns_M = 12
+num_lookups_M = 12
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -1985,7 +1985,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 1048576
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -1994,7 +1994,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 1048576
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -2003,7 +2003,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 1048576
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -2012,7 +2012,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 1048576
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -2021,7 +2021,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 1048576
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -2030,7 +2030,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 1048576
 num_columns_S = 1
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2059,7 +2059,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 7
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -2068,7 +2068,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 7
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -2077,7 +2077,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 7
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -2086,7 +2086,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 7
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -2095,7 +2095,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 2
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits.lookups]]
@@ -2104,7 +2104,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 4
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2133,7 +2133,7 @@ logup_type = "univariate"
 rows_L = 0
 rows_T = 2097152
 num_columns_S = 8
-num_columns_M = 1
+num_lookups_M = 1
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2162,7 +2162,7 @@ logup_type = "univariate"
 rows_L = 262144
 rows_T = 262144
 num_columns_S = 2
-num_columns_M = 36
+num_lookups_M = 36
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2191,7 +2191,7 @@ logup_type = "univariate"
 rows_L = 262144
 rows_T = 262144
 num_columns_S = 2
-num_columns_M = 36
+num_lookups_M = 36
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2220,7 +2220,7 @@ logup_type = "univariate"
 rows_L = 262144
 rows_T = 262144
 num_columns_S = 2
-num_columns_M = 36
+num_lookups_M = 36
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2249,7 +2249,7 @@ logup_type = "univariate"
 rows_L = 1048576
 rows_T = 1048576
 num_columns_S = 2
-num_columns_M = 36
+num_lookups_M = 36
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2278,7 +2278,7 @@ logup_type = "univariate"
 rows_L = 524288
 rows_T = 524288
 num_columns_S = 2
-num_columns_M = 36
+num_lookups_M = 36
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2307,7 +2307,7 @@ logup_type = "univariate"
 rows_L = 262144
 rows_T = 262144
 num_columns_S = 2
-num_columns_M = 36
+num_lookups_M = 36
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2336,7 +2336,7 @@ logup_type = "univariate"
 rows_L = 131072
 rows_T = 131072
 num_columns_S = 2
-num_columns_M = 27
+num_lookups_M = 27
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2345,19 +2345,19 @@ group = "final"
 trace_length = 65536
 rho = 0.03125
 air_max_degree = 8
-num_columns_fixed = 55
-num_columns_witness = 80
-num_columns = 135
-num_constraints = 161
+num_columns_fixed = 46
+num_columns_witness = 68
+num_columns = 114
+num_constraints = 154
 opening_points = 4
-batch_size = 158
+batch_size = 139
 power_batching = true
 num_queries = 43
 fri_folding_factors = [16, 16, 16, 16]
 fri_early_stop_degree = 32
 grinding_query_phase = 22
-gap_to_radius = 0.0036666666666666666
-proof_size = "335.21 KB"
+gap_to_radius = 0.003333333333333333
+proof_size = "327.71 KB"
 
 [[circuits.lookups]]
 name = "Connection_gprod_[1]"
@@ -2365,7 +2365,7 @@ logup_type = "univariate"
 rows_L = 65536
 rows_T = 65536
 num_columns_S = 2
-num_columns_M = 33
+num_lookups_M = 24
 grinding_bits_lookup = 0
 
 [[circuits]]
@@ -2394,5 +2394,5 @@ logup_type = "univariate"
 rows_L = 32768
 rows_T = 32768
 num_columns_S = 2
-num_columns_M = 27
+num_lookups_M = 27
 grinding_bits_lookup = 0

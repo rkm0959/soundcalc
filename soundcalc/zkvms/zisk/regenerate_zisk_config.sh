@@ -73,7 +73,7 @@ tar -xvzf "$ZISK_SETUP/zisk-provingkey.tar.gz" -C "$ZISK_SETUP"
 
 echo "=== 4. Clone pil2-proofman ==="
 PIL2_DIR="$ZISK_SETUP/pil2-proofman"
-git clone https://github.com/0xPolygonHermez/pil2-proofman.git "$PIL2_DIR"
+git clone --branch pre-develop-0.17.0 https://github.com/0xPolygonHermez/pil2-proofman.git "$PIL2_DIR"
 
 echo "=== 5. Generate ZisK TOML ==="
 cargo run --manifest-path "$PIL2_DIR/Cargo.toml" --bin proofman-cli soundness -k "$ZISK_SETUP/provingKey" -a -o "$SCRIPT_DIR/zisk.toml"
