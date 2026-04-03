@@ -12,7 +12,7 @@ udr_only = true
 blowup_factor = 4
 rho = 0.25
 trace_length = 4194304 # 2^22
-trace_columns = 3728
+trace_columns = 3741
 dense_length = 2097152 # 2^21
 dense_batch = 193 # 2^8 - 2^6 + 1
 num_constraints = 3412
@@ -26,7 +26,7 @@ multilinear_zerocheck = true
 num_queries = 124
 fri_folding_factors = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 fri_early_stop_degree = 4
-grinding_batching_phase = 1
+grinding_batching_phase = 5
 grinding_query_phase = 16
 
 [[circuits.lookups]]
@@ -35,7 +35,7 @@ logup_type = "multivariate"
 rows_L = 4194304
 rows_T = 0
 num_columns_S = 107
-num_lookups_M = 1900
+num_lookups_M = 1911
 grinding_bits_lookup = 12
 multilinear_fingerprint = true
 
@@ -60,6 +60,7 @@ multilinear_zerocheck = true
 num_queries = 124
 fri_folding_factors = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 fri_early_stop_degree = 4
+grinding_batching_phase = 5
 grinding_query_phase = 16
 
 [[circuits.lookups]]
