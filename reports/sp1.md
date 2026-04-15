@@ -23,7 +23,21 @@ How to read this report:
 ## core
 
 **Parameters:**
-- Polynomial commitment scheme: Unknown
+- Polynomial commitment scheme: Jagged + FRI
+- Trace length: $2^{22}$
+- Trace width: 3728
+- Dense length (inner FRI): $2^{21}$
+- Hash size (bits): 248
+- Number of queries: 124
+- Grinding query phase (bits): 16
+- Field: KoalaBear⁴
+- Rate (ρ): 0.25
+- FRI rounds: 21
+- FRI folding factors: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+- FRI early stop degree: 4
+- Number of constraints: 3412
+- Dense batch size: 193
+- Batching: Affine
 - Lookup (logup): lookup
 
 **Proof Size:** 918 KiB (expected) / 1479 KiB (worst case)
@@ -36,7 +50,21 @@ How to read this report:
 ## compress
 
 **Parameters:**
-- Polynomial commitment scheme: Unknown
+- Polynomial commitment scheme: Jagged + FRI
+- Trace length: $2^{21}$
+- Trace width: 326
+- Dense length (inner FRI): $2^{20}$
+- Hash size (bits): 248
+- Number of queries: 124
+- Grinding query phase (bits): 16
+- Field: KoalaBear⁴
+- Rate (ρ): 0.25
+- FRI rounds: 20
+- FRI folding factors: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+- FRI early stop degree: 4
+- Number of constraints: 204
+- Dense batch size: 128
+- Batching: Affine
 - Lookup (logup): lookup
 
 **Proof Size:** 735 KiB (expected) / 1267 KiB (worst case)
@@ -49,7 +77,21 @@ How to read this report:
 ## shrink
 
 **Parameters:**
-- Polynomial commitment scheme: Unknown
+- Polynomial commitment scheme: Jagged + FRI
+- Trace length: $2^{19}$
+- Trace width: 326
+- Dense length (inner FRI): $2^{18}$
+- Hash size (bits): 248
+- Number of queries: 94
+- Grinding query phase (bits): 22
+- Field: KoalaBear⁴
+- Rate (ρ): 0.125
+- FRI rounds: 18
+- FRI folding factors: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+- FRI early stop degree: 8
+- Number of constraints: 204
+- Dense batch size: 128
+- Batching: Affine
 - Lookup (logup): lookup
 
 **Proof Size:** 529 KiB (expected) / 887 KiB (worst case)
@@ -62,7 +104,21 @@ How to read this report:
 ## wrap
 
 **Parameters:**
-- Polynomial commitment scheme: Unknown
+- Polynomial commitment scheme: Jagged + FRI
+- Trace length: $2^{21}$
+- Trace width: 120
+- Dense length (inner FRI): $2^{21}$
+- Hash size (bits): 248
+- Number of queries: 94
+- Grinding query phase (bits): 22
+- Field: KoalaBear⁴
+- Rate (ρ): 0.125
+- FRI rounds: 21
+- FRI folding factors: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+- FRI early stop degree: 8
+- Number of constraints: 43
+- Dense batch size: 64
+- Batching: Affine
 - Lookup (logup): lookup
 
 **Proof Size:** 580 KiB (expected) / 1001 KiB (worst case)

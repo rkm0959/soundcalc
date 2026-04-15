@@ -6,12 +6,14 @@ This file is a mess.
 
 from __future__ import annotations
 
+import math
 import os
 from dataclasses import dataclass
 from typing import Any
 
 from soundcalc.common.utils import KIB
 from soundcalc.pcs.fri import FRI
+from soundcalc.pcs.jagged import JaggedPCS
 from soundcalc.pcs.whir import WHIR
 from soundcalc.zkvms.circuit import Circuit
 from soundcalc.zkvms.zkvm import zkVM
@@ -98,6 +100,8 @@ def _pcs_label(circuit: Circuit) -> str:
         return "FRI"
     elif isinstance(circuit.pcs, WHIR):
         return "WHIR"
+    elif isinstance(circuit.pcs, JaggedPCS):
+        return "Jagged + FRI"
     return "Unknown"
 
 
@@ -190,6 +194,38 @@ def _fri_parameter_lines(circuit: Circuit) -> list[str]:
     return lines
 
 
+def _jagged_parameter_lines(circuit: Circuit) -> list[str]:
+    pcs = circuit.pcs
+    dense_pcs = pcs.dense_pcs
+    batching = "Powers" if dense_pcs.power_batching else "Affine"
+    lines = [
+        f"- Polynomial commitment scheme: Jagged + FRI",
+        f"- Trace length: $2^{{{math.ceil(math.log2(pcs.trace_length))}}}$",
+        f"- Trace width: {pcs.trace_width}",
+        f"- Dense length (inner FRI): $2^{{{dense_pcs.h}}}$",
+        f"- Hash size (bits): {dense_pcs.hash_size_bits}",
+        f"- Number of queries: {dense_pcs.num_queries}",
+        f"- Grinding query phase (bits): {dense_pcs.grinding_query_phase}",
+    ]
+    if dense_pcs.grinding_commit_phase > 0:
+        lines.append(f"- Grinding commit phase, at every folding round (bits): {dense_pcs.grinding_commit_phase}")
+    if dense_pcs.grinding_batching_phase > 0:
+        lines.append(f"- Grinding batching phase (bits): {dense_pcs.grinding_batching_phase}")
+    if circuit.grinding_deep > 0:
+        lines.append(f"- Grinding DEEP (bits): {circuit.grinding_deep}")
+    lines.extend([
+        f"- Field: {_field_label(dense_pcs.field)}",
+        f"- Rate (ρ): {dense_pcs.rho}",
+        f"- FRI rounds: {dense_pcs.FRI_rounds_n}",
+        f"- FRI folding factors: {dense_pcs.FRI_folding_factors}",
+        f"- FRI early stop degree: {dense_pcs.FRI_early_stop_degree}",
+        f"- Number of constraints: {circuit.num_constraints}",
+        f"- Dense batch size: {dense_pcs.batch_size}",
+        f"- Batching: {batching}",
+    ])
+    return lines
+
+
 def _whir_parameter_lines(circuit: Circuit) -> list[str]:
     pcs = circuit.pcs
     batching = "Powers" if pcs.power_batching else "Affine"
@@ -233,6 +269,8 @@ def _get_parameter_lines(circuit: Circuit) -> list[str]:
         lines = _fri_parameter_lines(circuit)
     elif isinstance(circuit.pcs, WHIR):
         lines = _whir_parameter_lines(circuit)
+    elif isinstance(circuit.pcs, JaggedPCS):
+        lines = _jagged_parameter_lines(circuit)
     else:
         lines = _generic_parameter_lines(circuit)
     lines.extend(_lookup_parameter_lines(circuit))
